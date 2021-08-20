@@ -1,28 +1,114 @@
 // Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
+@import"./normalize";
+@import"./header/header";
+@import"./footer/footer";
+@import"./slider/slider";
+@import"./button/button";
+@import"./products/products";
+@import"./delivery/delivery";
+@import"./brands/brands";
+@import"./widget/widget";
+@import"./footer/footer";
+@import"./form/form";
+@import"./checkbox/checkbox";
+@import"./breadcrumbs/breadcrumbs";
+@import"./contact-us/contact-us";
+@import"./filter/filter";
+@import"./goods/goods";
+@import"./goods-item/goods-item";
+@import"./paginator-page/paginator-page";
+@import"./blog/blog";
+@import"./blog-item/blog-item";
+@import"./catalog/catalog";
+@import"./catalog-item/catalog-item";
 
-body {
-  font-family: Oswald, sans-serif;
-}
 
 .container {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+	max-width: 1180px;
+	margin: 0 auto;
 }
 
-.title-block {
-  margin: 0 0 20px 0;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
-  }
+body {
+	font-family: "Open sans", "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul,
+p,
+button {
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	border: none;
+	border-radius: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #1e0606;
+	text-decoration: none;
+}
+
+.hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.title{
+
+	&__one {
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 44px;
+		color: #1e0606;
+		text-transform: uppercase;
+	}
+
+	&__two {
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-weight: 700;
+		font-size: 38px;
+		line-height: 46px;
+		color: #1e0606;
+		text-transform: uppercase;
+	}
+}
+
+.text {
+	font-family: "Open sans", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #1e0606;
 }

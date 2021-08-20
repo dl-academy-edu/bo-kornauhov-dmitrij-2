@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="DLK категория продуктов">
+	<link href="/common.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<link href="/normalize.css" rel="stylesheet" />
+	<link href="/static/fonts/font-name.css" rel="stylesheet">
+	<title>products</title>
+</head>
+
+<body>
+	@@include('header/index.html')
+	@@include('breadcrumbs/index.html',{
+	"type": "products"
+	})
+	<main>
+		@@include('catalog/index.html')
+	</main>
+	@@include('footer/index.html')
+</body>
+
+</html>

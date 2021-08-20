@@ -1,0 +1,58 @@
+.widget {
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: start;
+		margin-bottom: 155px;
+	}
+}
+
+.design-life {
+	max-width: 543px;
+	padding: 0 30px 27px 30px;
+	background: #e1f0f7;
+
+	&__title  {
+		margin: -25px 0 15px 0;
+	}
+
+	&__subtitle {
+		margin: 0 0 10px 0;
+		font-family: "Crimson Text", "Georgia", serif;
+		font-style: italic;
+		font-size: 26px;
+	}
+
+	&__button {
+		max-width: 123px;
+		margin-top: 20px;
+	}
+}
+
+.contact {
+	position: relative;
+	max-width: 543px;
+	padding: 10px 30px 102px 30px;
+	background: #e1f0f7;
+	margin-right: 37px;
+
+	&__title{
+		margin-top: -35px;
+	}
+
+	&__text {
+		margin-top: 20px;
+	}
+}
+
+.map {
+	position: absolute;
+
+	iframe{
+		margin-top: 20px;
+		border: none;
+		background: #ededee;
+	}
+}

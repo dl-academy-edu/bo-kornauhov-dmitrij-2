@@ -1,0 +1,38 @@
+	@import "./colors";
+
+.checkbox {
+
+	&__check {
+		position: absolute;
+		cursor: pointer;
+		width: 19px;
+		height: 19px;
+		border: 2px solid $c__brown;
+		border-radius: 3px;
+	}
+
+		&__check::before {
+		display: block;
+		position: absolute;
+		top: -1px;
+		left: 2px;
+		opacity: 0;
+		width: 15px;
+		height: 15px;
+		background-image: url("/static/images/check-mark.png");
+		content: "";
+	}
+
+	&:checked ~ &__check::before {
+		opacity: 1;
+	}
+
+
+	&:disabled ~ .checkbox__check {
+		opacity: 0.5;
+	}
+}
+
+
+
+	

@@ -1,10 +1,25 @@
-<header>
+<header class="header">
   <div class="container">
-    <span class="title-block title-block_one">
-      Header
-    </span>
-    <a href="/">Главная</a>
-    <a href="/pages/catalog">Каталог</a>
-    <a href="/pages/toys">Игрушки</a>
+    <div class='header__content'>
+      <a class="header__logo" href="/"><img class="header-logo__img" src="/static/images/logo.svg" alt="logo"
+          width="100" height="52"></a>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+          <li class="header-nav__item"><a class="header-nav__link" href="/pages/blog/index.html">blog</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="/pages/products/index.html">catalog</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#">about us</a></li>
+        </ul>
+      </nav>
+      <div class="header-bar">
+        <ul class="header-bar__list">
+          <li class="header-bar__item">
+            <button class="header__search" aria-label="search"><img src="/static/images/search.png" alt="search"
+                height="18" width="18"></button>
+          </li>
+          <li class="header-bar__item"><a class="header-bar__link" href="/pages/contact-us/index.html">contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>

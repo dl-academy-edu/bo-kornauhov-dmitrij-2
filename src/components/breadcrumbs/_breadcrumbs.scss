@@ -1,0 +1,52 @@
+	@import "./colors";
+	
+	.bread-crumbs {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin: 20px 0 47px 0;
+		}
+
+		&__item {
+			margin-right: 50px;
+			position: relative;
+		}
+
+		&__item::after {
+			position: absolute;
+			content: "";
+			background: url("/static/images/bread-crumbs-arrow.svg");
+			width: 8px;
+			height: 12px;
+			top: 4px;
+			right: -29px;
+		}
+
+		&__item:last-child::after {
+			background: 0;
+		}
+
+		&__link {
+			font-family: "Crimson text", "Georgia", serif;
+			font-style: italic;
+			font-size: 20px;
+			color: $c__black;
+			line-height: 25px;
+			outline: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+
+			&--gray {
+				color: $c__gray-bread;
+				cursor: default;
+			}
+		}
+	}
+
+.tittle__page {
+	margin-top: 63px;
+}	

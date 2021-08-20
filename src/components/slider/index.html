@@ -1,0 +1,52 @@
+<section class="slider">
+	<div class="container">
+		<div class="slider__content">
+			<div class="slider__control">
+				<p class="slider-paginator__number">01</p>
+				<ul class="slider-paginator__list">
+					<li class="slider-paginator__item">
+						<button class="slider-paginator__button active" aria-label="slide1"></button>
+					</li>
+					<li class="slider-paginator__item">
+						<button class="slider-paginator__button" aria-label="slide2"></button>
+					</li>
+					<li class="slider-paginator__item">
+						<button class="slider-paginator__button" aria-label="slide3"></button>
+					</li>
+					<li class="slider-paginator__item">
+						<button class="slider-paginator__button" aria-label="slide4"></button>
+					</li>
+				</ul>
+			</div>
+			<div class="slider__info">
+				<h1 class="slider__title title__one">The ooh noo collection</h1>
+				<p class="slider__text">Designed in Slovenia</p>
+				@@include('button/index.html',{
+				"class": "slider__button button-popup-js",
+				"type": "button",
+				"text": "Explore Now",
+				"disabled": "no"
+				})
+			</div>
+			<img class="slider__img" src="/static/images/slider-alien.png" alt="slider" width=636 height=461>
+			<div class="slider-bottom">
+				<p class="slider-bottom__text">free (continental) usa shipping on all orders of $100 usd or more!</p>
+			</div>
+		</div>
+	</div>
+	<div class="slider__info hidden">
+		<p class="slider__title">The ooh noo collection</p>
+		<p class="slider__text">Designed in Slovenia</p>
+		<button class="slider__button" aria-label="slider-button" disabled>Explore now</button>
+	</div>
+	<div class="slider__info hidden">
+		<p class="slider__title">The ooh noo collection</p>
+		<p class="slider__text">Designed in Slovenia</p>
+		<button class="slider__button" aria-label="slider-button" disabled>Explore now</button>
+	</div>
+	<div class="slider__info hidden">
+		<p class="slider__title">The ooh noo collection</p>
+		<p class="slider__text">Designed in Slovenia</p>
+		<button class="slider__button" aria-label="slider-button" disabled>Explore now</button>
+	</div>
+</section>

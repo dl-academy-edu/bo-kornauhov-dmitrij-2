@@ -1,0 +1,62 @@
+@import "./colors";
+
+.goods {
+
+	&__item {
+		width: 33.33%;
+		padding: 0 10px;
+		margin-bottom: 46px;
+	}
+
+	&__title {
+		margin: 27px 0 17px 0;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: #1e0606;
+	}
+
+	&__price {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 22px;
+		color: $c__black;
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		outline: none;
+	}
+
+	&__link::before {
+		position: absolute;
+		top: 38%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 207px;
+		height: 207px;
+		padding: 82px 12px 96px 11px;
+		background-color: #e5eaf8;
+		color: $c__black;
+		content: "learn more";
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-size: 26px;
+		line-height: 29px;
+		font-weight: 700;
+		text-transform: uppercase;
+		opacity: 0;
+		cursor: pointer;
+		transition: 0.7s;
+	}
+
+	&__link:focus::before,
+	&__link:hover::before {
+	opacity: 0.8;
+	}
+
+	&__link:active::before {
+	opacity: 0.5;
+	}	
+}

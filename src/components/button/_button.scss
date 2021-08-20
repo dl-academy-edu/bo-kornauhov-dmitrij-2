@@ -1,0 +1,34 @@
+@import "./colors";
+
+.button {
+	font-family: "Open sans", "Arial", sans-serif;
+	display: block;
+	max-width: 161px;
+	padding: 9px 22px;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	color: $c__white;
+	background-color: $c__black;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: $transition;
+
+	&:hover,
+	&:focus {
+		background-color: $c__brown;
+	}
+
+	&:active {
+		background-color: $c__brown-light;
+	}
+
+	&:disabled {
+		color: #e1e1e1;
+		background-color: #c1c1c1;
+	}
+
+}

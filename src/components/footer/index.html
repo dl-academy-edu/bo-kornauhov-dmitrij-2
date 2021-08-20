@@ -1,8 +1,111 @@
-<footer>
-  <div class="container">
-    <span class="title-block title-block_one">Footer</span>
-    <a href="/">Главная</a>
-    <a href="/pages/catalog">Каталог</a>
-    <a href="/pages/toys">Игрушки</a>
-  </div>
+<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__content">
+			<div class="footer__column">
+				<h3 class="footer__title">Navigation</h3>
+				<ul class="footer__list">
+					<li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
+					<li class="footer__item"><a class="footer__link" href="./pages/blog/index.html">Blog</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">Design Services</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">Featured On</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">2018 Holiday Catalog</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">Shop By Designer</a></li>
+				</ul>
+			</div>
+			<div class="footer__column">
+				<h3 class="footer__title">Customer Information</h3>
+				<ul class="footer__list">
+					<li class="footer__item"><a class="footer__link" href="./pages/contact-us/index.html">Contact Us</a>
+					</li>
+					<li class="footer__item"><a class="footer__link" href="#">Sale Exclusions</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">Shipping & Returns</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">Terms & Conditions</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
+					<li class="footer__item"><a class="footer__link" href="#">Search</a></li>
+				</ul>
+			</div>
+			<div class="footer-connect">
+				<div class="footer__column">
+					<h3 class="footer__title">Connect</h3>
+					<form class="footer-connect__form" action="#">
+						<label for="mail"></label>
+						<input class="footer-connect__input" id="mail" type="email" name="email" placeholder="Email"
+							autocomplete="off">
+						@@include('button/index.html',{
+						"class": "footer-connect__button",
+						"type": "button",
+						"text": "Join",
+						"disabled": "no"
+						})
+					</form>
+					<ul class="social__list">
+						<li class="social__item"><a class="social__link" href="">
+								<img class="social__item" src="/static/images/facebook.png" alt="facebook" width="30" height="30"></a>
+						</li>
+						<li class="social__item"><a class="social__link" href="">
+								<img class="social__img" src="/static/images/twitter.png" alt="twitter" width="30" height="30"></a></li>
+						<li class="social__item"><a class="social__link" href="">
+								<img class="social__img" src="/static/images/pinterest.png" alt="pinterest" width="30" height="30"></a>
+						</li>
+						<li class="social__item"><a class="social__link" href="">
+								<img class="social__item" src="/static/images/instagram.png" alt="instagram" width="30" height="30"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer__rating footer-bottom__content">
+				<p class="footer-bottom__text rating__text">Company Rating</p>
+				<div class="rating-stars">
+					<input class="rating-stars__input" aria-label="rating" type="radio" id="star-5" name="rating" value="5">
+					<label class="rating-stars__label" for="star-5"><svg class="rating-stars__img" width="14" height="13"
+							viewBox="0 0 14 13" fill="white" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
+								fill="white" />
+						</svg>
+					</label>
+					<input class="rating-stars__input" aria-label="rating" type="radio" id="star-4" name="rating" value="4">
+					<label class="rating-stars__label" for="star-4"><svg class="rating-stars__img" width="14" height="13"
+							viewBox="0 0 14 13" fill="white" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
+								fill="white" />
+						</svg>
+					</label>
+					<input class="rating-stars__input" aria-label="rating" type="radio" id="star-3" name="rating" value="3">
+					<label class="rating-stars__label" for="star-3"><svg class="rating-stars__img" width="14" height="13"
+							viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
+								fill="white" />
+						</svg>
+					</label>
+					<input class="rating-stars__input" aria-label="rating" type="radio" id="star-2" name="rating" value="2">
+					<label class="rating-stars__label" for="star-2"><svg class="rating-stars__img" width="14" height="13"
+							viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
+								fill="white" />
+						</svg>
+					</label>
+					<input class="rating-stars__input" aria-label="rating" type="radio" id="star-1" name="rating" value="1">
+					<label class="rating-stars__label" for="star-1"><svg class="rating-stars__img" width="14" height="13"
+							viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"
+								fill="white" />
+						</svg>
+					</label>
+				</div>
+			</div>
+			<div class="footer-bottom__content">
+				<p class="footer-bottom__text">Copyright © 2018 Dlk • Design Life Kids</p>
+			</div>
+			<div class="footer-bottom__content"><a class="footer-bottom__text footer-bottom__link"
+					href="https://directline.digital/" target="_blank">Web
+					Design — Direct Line Development</a></div>
+		</div>
+	</div>
 </footer>

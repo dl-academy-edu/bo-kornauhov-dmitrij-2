@@ -1,0 +1,24 @@
+.brands {
+	margin-top: 91px;
+	margin-bottom: 112px;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__link {
+		outline: none;
+
+		&:hover,
+		&:focus {
+			opacity: 0.5;
+			transition: 0.5s;
+		}
+		&:active {
+			opacity: 0.3;
+		}
+	}
+}

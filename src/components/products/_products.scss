@@ -1,0 +1,41 @@
+.products {
+	&__title {
+		margin: 91px 0 30px 0;
+	}
+
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	&-bar__button{
+		display: flex;
+		align-items: center;
+		margin-top: 28px;
+	}
+
+	&-bar__text {
+		margin-left: 15px;
+		width: 580px;
+		margin-top: 2px;
+	}
+}
+
+.arrow__button {
+	padding: 3px;
+	cursor: pointer;
+	width: 37px;
+	height: 37px;
+	background-color: rgba(112, 187, 220, 0.2);
+	outline: none;
+
+	&:not(:last-child) {
+		margin-right: 6px;
+	}
+
+}
+
+	.right {
+		transform: rotate(-180deg);
+	}

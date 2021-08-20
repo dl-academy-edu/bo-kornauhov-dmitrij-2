@@ -1,0 +1,90 @@
+@import "./colors";
+
+.slider {
+	&__content {
+		display: flex;
+		position: relative;
+		margin-top: 129px;
+		background: #eee4db;
+	}
+
+	&__control {
+		margin-top: 18px;
+		margin-left: 28px;
+	}
+	
+	&-paginator__number {
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-weight: 300;
+		font-size: 60px;
+		line-height: 73px;
+		color: rgba(30, 6, 6, 0.05);
+	}
+
+	&-paginator__list {
+		position: absolute;
+		top: 78px;
+		left: 31px;
+	}
+
+	&-paginator__item {
+			width: 31px;
+			height: 3px;
+			margin: 11px 0;
+		}
+
+	&-paginator__button {
+		width: 31px;
+		height: 3px;
+		cursor: pointer;
+		background-color: #d6cac2;
+		outline: none;
+
+		&:hover,
+		&:focus {
+			background-color: rgba(30, 6, 6, 0.6);
+		}
+	}
+
+	.active {
+		background-color: rgba(30, 6, 6, 0.6);
+	}
+
+	&__info {
+		margin: 92px 6px 128px 45px;
+		max-width: 310px;
+	}
+
+	&__text {
+		margin: 19px 0;
+		font-family: "Crimson Text", "Georgia", serif;
+		font-style: italic;
+		line-height: 25px;
+		font-size: 20px;
+	}
+
+	&__img {
+		position: absolute;
+		right: 99px;
+		bottom: 39px;
+	}
+
+	&-bottom {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		padding: 12px 0 11px 0;
+		background-color: $c__brown;
+	}
+
+	&-bottom__text{
+		font-family: "Open sans", "Arial", sans-serif;
+		line-height: 16px;
+		font-size: 12px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		color: $c__white;
+	}
+
+}

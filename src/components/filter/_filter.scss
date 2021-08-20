@@ -1,0 +1,194 @@
+	@import "./colors";
+
+.filter {
+	background: $c__blue-light;
+
+	&__button {
+		margin-top: 37px;
+	}
+}
+
+	.filter-form {
+		display: flex;
+		align-items: start;
+		padding: 42px 0 30px 0;
+		color: $c__black;
+
+		&__legend {
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 22px;
+		}
+
+		&__text  {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		&__field-price {
+			margin-right: 94px;
+		}
+
+		&__range {
+			appearance: none;
+			width: 188px;
+			height: 4px;
+			margin: 25px 14px 16px 5px;
+			background-color: rgba(0, 0, 0, 0.5);
+			outline: none;
+
+			&:hover,
+			&:focus {
+				background-color: $c__brown;
+			}
+		}
+
+		&__range::-webkit-slider-thumb {
+			appearance: none;
+			width: 24px;
+			height: 24px;
+			background-color: $c__white;
+			border: 8px solid $c__brown;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		&__range::-moz-range-thumb {
+			-moz-appearance: none;
+			width: 8px;
+			height: 8px;
+			background-color: $c__white;
+			border: 8px solid $c__brown;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		&__range-box  {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__field-color {
+			margin-right: 123px;
+		}
+
+		&__list {
+			margin-top: 16px;
+		}
+
+		&__item-checkbox {
+			margin-bottom: 19px;
+		}
+
+		&__item-checkbox:last-child {
+			margin-bottom: 15px;
+		}
+
+		&__field-delivery {
+			margin-right: 69px;
+		}
+
+		&__item {
+			margin-bottom: 14px;
+		}
+
+		&__radio {
+			appearance: none;
+		}
+
+		&__radio-label {
+			margin-left: 26px;
+			cursor: pointer;
+			position: relative;
+		}
+
+		&__radio-label::before {
+			display: block;
+			position: absolute;
+			top: 2px;
+			left: -30px;
+			width: 20px;
+			height: 20px;
+			border: 2px solid $c__brown;
+			border-radius: 50%;
+			content: "";
+			cursor: pointer;
+		}
+
+		&__radio-label::after {
+			display: block;
+			position: absolute;
+			top: 6px;
+			left: -26px;
+			width: 12px;
+			height: 12px;
+			background-color: $c__brown;
+			border-radius: 50%;
+			content: "";
+			cursor: pointer;
+			opacity: 0;
+		}
+
+		&__radio:checked + &__radio-label::after {
+			opacity: 1;
+		}
+
+		&__radio:focus ~ &__radio-label {
+			text-decoration: underline;
+		}
+
+		&__radio:disabled + &__radio-label::before {
+			opacity: 0.3;
+		}
+
+		&__radio:disabled + &__radio-label::after {
+			opacity: 0;
+		}
+
+		&__pick {
+			appearance: none;
+		}
+
+		&__field-pick {
+			max-width: 240px;
+			margin-right: 60px;
+		}
+
+		&__list-pick {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: -3px;
+		}
+
+		&__pick-label {
+			cursor: pointer;
+			display: block;
+			width: 80px;
+			padding: 9px 0 8px 0;
+			text-align: center;
+			background: $c__white;
+			
+			&:hover {
+				background: #f3d0db;
+				opacity: 0.5;
+			}
+		}
+
+		&__pick:checked + &__pick-label {
+			background: #f3d0db;
+		}
+
+		&__pick:focus ~ &__pick-label {
+			text-decoration: underline;
+		}
+
+		&__pick-label:active {
+			background: #f3d0db;
+			opacity: 0.3;
+		}
+
+		&__pick:disabled + &__pick-label {
+			opacity: 0.3;
+			background: $c__white;
+		}
+	}
