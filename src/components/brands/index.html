@@ -1,21 +1,48 @@
 <div class="brands">
-	<div class="container">
+	<div class="container-content">
 		<ul class="brands__list">
-			<li class="brands__item">
+			<li class="brands__item brands__item--1">
 				<a class="brands__link" href="#">
-					<img class="brands__img" src="/static/images/brand1.png" alt="mail" width="193" height="60"></a>
+					<picture>
+						<source srcset="/static/images/brand1.png, /static/images/brand1-2x.png 2x" media="(min-width: 1024px)">
+						<source srcset="/static/images/brand1-tablet.png, /static/images/brand1-tablet-2x.png " media="(min-width: 768px) and (max-width: 1023px)">
+						<source srcset="/static/images/brand1-mobile.png, /static/images/brand1-mobile2x.png 2x" media="(max-width: 767px)">
+						<img class="brands__img" src="/static/images/brand1.png" alt="mail">
+					</picture>
+				</a>
 			</li>
-			<li class="brands__item">
+			<li class="brands__item brands__item--2">
 				<a class="brands__link" href="#">
-					<img class="brands__img" src="/static/images/brand2.png" alt="apple" width="179" height="61"></a>
+					<picture>
+						<source srcset="/static/images/brand2.png, /static/images/brand2-2x.png 2x" media="(min-width: 1024px)">
+						<source srcset="/static/images/brand2-tablet.png, /static/images/brand2-tablet-2x.png "
+							media="(min-width: 768px) and (max-width: 1023px)">
+						<source srcset="/static/images/brand2-mobile.png, /static/images/brand2-mobile2x.png 2x" media="(max-width: 767px)">
+						<img class="brands__img" src="/static/images/brand2.png" alt="apple">
+					</picture>
+				</a>
 			</li>
-			<li class="brands__item">
+			<li class="brands__item brands__item--3">
 				<a class="brands__link" href="#">
-					<img class="brands__img" src="/static/images/brand3.png" alt="eltex" width="216" height="46"></a>
+					<picture>
+						<source srcset="/static/images/brand3.png, /static/images/brand3-2x.png 2x" media="(min-width: 1024px)">
+						<source srcset="/static/images/brand3-tablet.png, /static/images/brand3-tablet-2x.png "
+							media="(min-width: 768px) and (max-width: 1023px)">
+						<source srcset="/static/images/brand3-mobile.png, /static/images/brand3-mobile2x.png 2x" media="(max-width: 767px)">
+						<img class="brands__img" src="/static/images/brand3.png" alt="eltex">
+					</picture>
+				</a>
 			</li>
-			<li class="brands__item">
+			<li class="brands__item brands__item--4">
 				<a class="brands__link" href="#">
-					<img class="brands__img" src="/static/images/brand4.png" alt="owox" width="211" height="40"></a>
+					<picture>
+						<source srcset="/static/images/brand4.png, /static/images/brand4-2x.png 2x" media="(min-width: 1024px)">
+						<source srcset="/static/images/brand4-tablet.png, /static/images/brand4-tablet-2x.png "
+							media="(min-width: 768px) and (max-width: 1023px)">
+						<source srcset="/static/images/brand4-mobile.png, /static/images/brand4-mobile2x.png 2x" media="(max-width: 767px)">
+						<img class="brands__img" src="/static/images/brand4.png" alt="owox">
+					</picture>
+				</a>
 			</li>
 		</ul>
 	</div>

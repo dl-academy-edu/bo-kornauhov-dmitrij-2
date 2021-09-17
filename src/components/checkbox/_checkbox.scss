@@ -1,8 +1,9 @@
-	@import "./colors";
+@import "./mixin";
+@import "./colors";
+@import "./vars";
 
 .checkbox {
-
-	&__check {
+	&__form {
 		position: absolute;
 		cursor: pointer;
 		width: 19px;
@@ -11,7 +12,7 @@
 		border-radius: 3px;
 	}
 
-		&__check::before {
+	&__form::before {
 		display: block;
 		position: absolute;
 		top: -1px;
@@ -19,20 +20,63 @@
 		opacity: 0;
 		width: 15px;
 		height: 15px;
-		background-image: url("/static/images/check-mark.png");
+		background-image: url("/static/images/check-mark.svg");
 		content: "";
+
+		@include media(0, $m_mob) {
+			left: 2px;
+			width: 13px;
+			height: 15px;
+		}
 	}
 
-	&:checked ~ &__check::before {
+	&:checked ~ &__form::before {
 		opacity: 1;
 	}
 
+	&:disabled ~ .checkbox__form {
+		opacity: 0.5;
+	}
 
-	&:disabled ~ .checkbox__check {
+	&__filter {
+		position: absolute;
+		cursor: pointer;
+		width: 19px;
+		height: 19px;
+		border: 2px solid $c__brown;
+		border-radius: 3px;
+
+		@include media(0, $m_mob) {
+			width: 17px;
+			height: 17px;
+		}
+	}
+
+	&__filter::before {
+		display: block;
+		position: absolute;
+		top: -0.1px;
+		left: 0;
+		opacity: 0;
+		width: 15px;
+		height: 15px;
+		background-color: #fff;
+		background-image: url("/static/images/check-mark.svg");
+		content: "";
+
+		@include media(0, $m_mob) {
+			top: 0;
+			left: 0;
+			width: 13px;
+			height: 13px;
+		}
+	}
+
+	&:checked ~ &__filter::before {
+		opacity: 1;
+	}
+
+	&:disabled ~ .checkbox__filter {
 		opacity: 0.5;
 	}
 }
-
-
-
-	

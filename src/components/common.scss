@@ -1,41 +1,126 @@
-// Подключение компонентов
-@import"./normalize";
-@import"./header/header";
-@import"./footer/footer";
-@import"./slider/slider";
-@import"./button/button";
-@import"./products/products";
-@import"./delivery/delivery";
-@import"./brands/brands";
-@import"./widget/widget";
-@import"./footer/footer";
-@import"./form/form";
-@import"./checkbox/checkbox";
-@import"./breadcrumbs/breadcrumbs";
-@import"./contact-us/contact-us";
-@import"./filter/filter";
-@import"./goods/goods";
-@import"./goods-item/goods-item";
-@import"./paginator-page/paginator-page";
-@import"./blog/blog";
-@import"./blog-item/blog-item";
-@import"./catalog/catalog";
-@import"./catalog-item/catalog-item";
+.title {
+	&__one {
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 44px;
+		color: #1e0606;
+		text-transform: uppercase;
+	}
 
+	&__two {
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-weight: 700;
+		font-size: 38px;
+		line-height: 46px;
+		color: #1e0606;
+		text-transform: uppercase;
+	}
+}
+
+.text {
+	font-family: "Open sans", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #1e0606;
+}
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./slider/slider";
+@import "./button/button";
+@import "./products/products";
+@import "./products-item/products-item";
+@import "./delivery/delivery";
+@import "./brands/brands";
+@import "./widget/widget";
+@import "./footer/footer";
+@import "./form/form";
+@import "./checkbox/checkbox";
+@import "./breadcrumbs/breadcrumbs";
+@import "./contact-us/contact-us";
+@import "./filter/filter";
+@import "./goods/goods";
+@import "./goods-item/goods-item";
+@import "./paginator-page/paginator-page";
+@import "./blog/blog";
+@import "./blog-item/blog-item";
+@import "./star/star";
+@import "./svg/svg";
+@import "./animation/animation";
+@import "./menu/menu";
+@import "./grid/grid";
+@import "./normalize";
+// Подключение компонентов
 
 .container {
-	max-width: 1180px;
+	max-width: 1200px;
 	margin: 0 auto;
+	padding: 0 10px;
+
+	@media (min-width: 1200px) {
+		padding: 0 10px;
+	}
+
+	@include media($m_tab, $m_pc) {
+		padding: 0 40px;
+	}
+
+	@include media($m_mob--md, $m_tab) {
+		padding: 0 60px;
+	}
+
+	@include media(0, $m_mob--md) {
+		padding: 0;
+	}
+
+	&-products {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 0 0 10px;
+
+		@include media($m_tab, $m_pc) {
+			padding: 0 0 0 40px;
+		}
+
+		@include media($m_mob--md, $m_tab) {
+			padding: 0 0 0 60px;
+		}
+
+		@include media(0, $m_mob--md) {
+			padding: 0 0 0 20px;
+		}
+	}
+}
+
+.container-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	@include media($m_tab, $m_pc) {
+		padding: 0 40px;
+	}
+
+	@include media($m_mob--md, $m_tab) {
+		padding: 0 60px;
+	}
+
+	@include media(0, $m_mob--md) {
+		padding: 0 20px;
+	}
+}
+
+body {
+	font-family: "Open sans", "Arial", sans-serif;
 }
 
 *,
 *::after,
 *::before {
 	box-sizing: border-box;
-}
-
-body {
-	font-family: "Open sans", "Arial", sans-serif;
 }
 
 h1,
@@ -70,6 +155,12 @@ a {
 	text-decoration: none;
 }
 
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
 .hidden {
 	position: absolute;
 	clip: rect(0 0 0 0);
@@ -78,37 +169,14 @@ a {
 	margin: -1px;
 }
 
-fieldset {
-	border: none;
-	padding: 0;
-	margin: 0;
+.body_scroll {
+	overflow: hidden;
 }
 
-.title{
-
-	&__one {
-		font-family: "Montserrat", "Tahoma", sans-serif;
-		font-weight: 700;
-		font-size: 40px;
-		line-height: 44px;
-		color: #1e0606;
-		text-transform: uppercase;
-	}
-
-	&__two {
-		font-family: "Montserrat", "Tahoma", sans-serif;
-		font-weight: 700;
-		font-size: 38px;
-		line-height: 46px;
-		color: #1e0606;
-		text-transform: uppercase;
-	}
+.active {
+	display: block;
 }
 
-.text {
-	font-family: "Open sans", "Arial", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 22px;
-	color: #1e0606;
+.disabled {
+	display: none;
 }

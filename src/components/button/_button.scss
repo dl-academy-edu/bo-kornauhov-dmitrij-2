@@ -1,4 +1,6 @@
+@import "./mixin";
 @import "./colors";
+@import "./vars";
 
 .button {
 	font-family: "Open sans", "Arial", sans-serif;
@@ -31,4 +33,12 @@
 		background-color: #c1c1c1;
 	}
 
+	@include media(0, $m_tab) {
+		padding: 8px 20px;
+	}
+
+	@include media(0, $m_mob--md) {
+		font-size: 14px;
+		line-height: 19px;
+	}
 }

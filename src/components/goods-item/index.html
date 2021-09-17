@@ -1,6 +1,14 @@
 <li class="goods__item">
-	<a class="goods__link" href="#"><img class="goods__img" src="/static/images/good@@img.png" alt="@@alt" width="380"
-			height="385">
+	<a class="goods__link" href="#">
+			<picture>
+				<source srcset="/static/images/good@@img-mobile.png, /static/images/good@@img-mobile-2x.png 2x"
+				media="(max-width: 767px)">
+				<source srcset="/static/images/good@@img-tablet.png, /static/images/good@@img-tablet-2x.png 2x"
+				media="(min-width: 768px) and (max-width: 1023px)">
+				<source srcset="/static/images/good@@img.png, /static/images/good@@img-2x.png 2x"
+				media="(min-width: 1024px)">
+				<img class="goods__img" src="/static/images/good@@img.png" alt="@@alt">
+		</picture>
 		<p class="goods__title">@@title</p>
 		<p class="goods__price">@@price</p>
 	</a>

@@ -1,108 +1,225 @@
 @import "./colors";
+@import "./mixin";
+@import "./vars";
 
 .header {
-  margin: 50px 0 0 0;
+	margin: 50px 0 0 0;
 
-  &__content { 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+	z-index: 1;
 
-  &__logo {
-    outline: none;
-	  line-height: 0;
+	@include media($m_mob, $m_tab) {
+		margin: 35px 0;
+	}
 
-    &:hover,
-    &:focus  {
-      opacity: 0.5;
-	    transition: 0.5s;
-    }
-    &:active {
-      opacity: 0.3;
-    }
-  }
+	@include media(0, $m_mob) {
+		margin: 25px 0 25px 0;
+	}
 
-  &-logo__img {
-    margin: 0 60px 0 0;
-  }
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
 
-  &-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
+		@include media($m_mob--md, $m_tab) {
+			justify-content: space-between;
+		}
+	}
 
-  &-nav__item {
-    margin: 0 20px 0 0;
-  }
+	&__open {
+		display: none;
+		cursor: pointer;
+		background: transparent;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $c__black;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 45px;
+		margin-top: 10px;
+		transition: $transition;
 
-  &-nav__link {
-    font-size: 14px;
-	  line-height: 20px;
-	  letter-spacing: 0.3px;
-	  text-transform: uppercase;
-	  outline: none;
-    
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-	    transition: 0.5s;
-    }
-    &:active {
-      opacity: 0.2;
-    }
-  }
+		@include media(0, $m_tab) {
+			display: block;
+		}
 
-  &-bar {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-  }
+		@include media(0, $m_mob--md) {
+			padding-right: 25px;
+		}
 
-  &-bar__list {
-    position: relative;
-	  display: flex;
-  }
+		&:hover,
+		&:focus {
+			opacity: 0.5;
+		}
 
-  &-bar__item {
-    margin: 0 0 0 21px;
-  }
+		&:active {
+			opacity: 0.2;
+		}
+	}
 
-  &__search {
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
+	&__close {
+		display: none;
+		cursor: pointer;
+		align-items: center;
+		background: transparent;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 45px;
+		margin-top: 10px;
+		outline: none;
+		transition: $transition;
 
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-	    transition: 0.5s;
-    }
-    &:active {
-      opacity: 0.2;
-    }
-  }
-  
-   &-bar__link {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: $c__black;
-    outline: none;
-    word-spacing: 3px;
+		&:hover,
+		&:focus {
+			opacity: 0.5;
+		}
 
-    &:hover,
-    &:focus {
-      opacity: 0.5;
-	    transition: 0.5s;
-    }
-    &:active {
-      opacity: 0.2;
-    }
-    }
+		&:active {
+			opacity: 0.2;
+		}
 
+		@include media(0, $m_mob--md) {
+			padding-right: 27px;
+			margin-top: 8px;
+		}
+	}
 
+	&__logo {
+		outline: none;
+		line-height: 0;
+		transition: $transition;
+
+		&:hover,
+		&:focus {
+			opacity: 0.5;
+		}
+		&:active {
+			opacity: 0.3;
+		}
+
+		&--img {
+			margin: 0 60px 0 0;
+			display: block;
+
+			@include media($m_mob--md, $m_tab) {
+				width: 62px;
+				height: 32px;
+				margin: 0;
+			}
+
+			@include media(0, $m_mob--md) {
+				width: 42px;
+				height: 22px;
+				margin: 0;
+			}
+		}
+	}
+
+	&-nav {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include media(0, $m_tab) {
+				display: none;
+			}
+		}
+
+		&__item {
+			margin: 0 20px 0 0;
+
+			@include media(0, $m_tab) {
+				margin: 0;
+			}
+		}
+
+		&__link {
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0.3px;
+			text-transform: uppercase;
+			outline: none;
+			transition: $transition;
+
+			&:hover,
+			&:focus {
+				opacity: 0.5;
+			}
+			&:active {
+				opacity: 0.2;
+			}
+		}
+	}
+
+	&-bar {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: auto;
+
+		@include media(0, $m_tab) {
+			margin: 0;
+		}
+
+		&__list {
+			position: relative;
+			display: flex;
+		}
+
+		&__item {
+			margin: 0 0 0 21px;
+
+			@include media(0, $m_tab) {
+				margin: 0;
+			}
+		}
+
+		&__search {
+			background-color: transparent;
+			cursor: pointer;
+			outline: none;
+			transition: $transition;
+
+			&:hover,
+			&:focus {
+				opacity: 0.5;
+			}
+			&:active {
+				opacity: 0.2;
+			}
+
+			@include media($m_mob--md, $m_tab) {
+				margin: 10px 0 0 0;
+			}
+
+			@include media(0, $m_mob--md) {
+				width: 13px;
+				height: 13px;
+				margin: 5px 0 0 0;
+			}
+		}
+
+		&__link {
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 19px;
+			text-transform: uppercase;
+			color: $c__black;
+			outline: none;
+			word-spacing: 3px;
+			transition: $transition;
+
+			&:hover,
+			&:focus {
+				opacity: 0.5;
+			}
+			&:active {
+				opacity: 0.2;
+			}
+		}
+
+		&--contact {
+			@include media(0, $m_tab) {
+				display: none;
+			}
+		}
+	}
 }
-
-

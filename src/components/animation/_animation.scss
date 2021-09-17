@@ -1,0 +1,374 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+@keyframes car {
+	from {
+		transform: translate(-300%);
+	}
+	to {
+		transform: translate(1000%);
+	}
+}
+
+@keyframes sky {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes taxi {
+	0% {
+		transform: translate(70%);
+	}
+
+	30% {
+		transform: translate(-114%);
+	}
+
+	70% {
+		transform: translate(-114%);
+	}
+
+	100% {
+		transform: translate(-400%);
+	}
+}
+
+@keyframes man-hand {
+	0% {
+		transform: rotate(155deg);
+	}
+
+	30% {
+		transform-origin: -100% 80%;
+		transform: rotate(-20deg);
+	}
+
+	70% {
+		transform-origin: -100% 80%;
+		transform: rotate(-20deg);
+	}
+
+	100% {
+		transform: rotate(152deg);
+	}
+}
+
+@keyframes woman-hand {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	30% {
+		transform-origin: 15% 20%;
+		transform: rotate(-60deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes talk {
+	0% {
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 0.3;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.animation {
+	position: relative;
+	max-width: 1585px;
+	width: 100vw;
+	margin: 0 auto 100px auto;
+	overflow: hidden;
+
+	@include media(0, $m_mob) {
+		margin: 0 auto 50px auto;
+	}
+
+	&__sky {
+		position: relative;
+		display: flex;
+		width: 100vw;
+		max-width: 1342px;
+		height: 7vw;
+		max-height: 135px;
+		margin: 0 auto 20px auto;
+	}
+
+	&__sun {
+		position: absolute;
+		left: 85%;
+		width: 4vw;
+		height: 4vw;
+		max-width: 59px;
+		max-height: 60px;
+	}
+
+	&__cloud {
+		position: absolute;
+		animation: sky 120s infinite;
+
+		&--one {
+			top: 10%;
+			left: 5%;
+			width: 5vw;
+			height: 2vw;
+			max-width: 92px;
+			max-height: 26px;
+		}
+
+		&--two {
+			left: 25%;
+			top: 40%;
+			width: 10vw;
+			height: 3vw;
+			max-width: 186px;
+			max-height: 38px;
+		}
+
+		&--three {
+			left: 45%;
+			top: 0;
+			width: 8vw;
+			height: 3vw;
+			max-width: 156px;
+			max-height: 32px;
+		}
+
+		&--four {
+			left: 55%;
+			top: 80%;
+			width: 12vw;
+			height: 3vw;
+			max-width: 201px;
+			max-height: 42px;
+		}
+
+		&--five {
+			left: 72%;
+			top: 50%;
+			width: 5vw;
+			height: 2vw;
+			max-width: 92px;
+			max-height: 26px;
+		}
+
+		&--six {
+			left: 95%;
+			top: 50%;
+			width: 10vw;
+			height: 3vw;
+			max-width: 185px;
+			max-height: 34px;
+		}
+	}
+
+	&__city {
+		width: 100vw;
+		max-width: 1585px;
+		height: 35vw;
+		max-height: 630px;
+	}
+
+	&__car {
+		&--one {
+			position: absolute;
+			bottom: 32%;
+			left: 0%;
+
+			width: 15vw;
+			height: 6vw;
+			max-width: 250px;
+			max-height: 100px;
+			animation: car 8s infinite;
+		}
+
+		&--two {
+			position: absolute;
+			bottom: 29%;
+			left: -15%;
+
+			width: 15vw;
+			height: 8vw;
+			max-width: 203px;
+			max-height: 96px;
+			animation: car 8s 1s infinite;
+		}
+
+		&--three {
+			position: absolute;
+			bottom: 31%;
+			left: -19%;
+
+			width: 17vw;
+			height: 6vw;
+			max-width: 246px;
+			max-height: 65px;
+			animation: car 8s 3s infinite;
+		}
+
+		&--four {
+			position: absolute;
+			bottom: 34%;
+			left: -22%;
+
+			width: 15vw;
+			height: 8vw;
+			max-width: 268px;
+			max-height: 126px;
+			animation: car 8s 5s infinite;
+		}
+	}
+
+	&__lamp {
+		position: absolute;
+		bottom: 5%;
+		right: 15%;
+		width: 10vw;
+		max-width: 214px;
+		height: 27vw;
+		max-height: 552px;
+
+		&-bg {
+			position: absolute;
+			bottom: 25%;
+			width: 10vw;
+			max-width: 150px;
+			height: 22vw;
+			max-height: 388px;
+
+			&--right {
+				right: -4%;
+			}
+
+			&--left {
+				left: 35%;
+			}
+		}
+	}
+
+	&__taxi {
+		position: absolute;
+		bottom: 15%;
+		left: 100%;
+		width: 51vw;
+		max-width: 866px;
+		height: 11vw;
+		max-height: 266px;
+		animation: taxi 9s 7s;
+
+		&--talk {
+			position: absolute;
+			bottom: 40%;
+			left: 58%;
+			width: 10vw;
+			height: 6vw;
+			max-width: 160px;
+			max-height: 99px;
+			opacity: 0;
+			animation: talk 2.5s 10.5s;
+		}
+	}
+
+	&__man {
+		position: absolute;
+		bottom: 6%;
+		left: 24%;
+		width: 13vw;
+		height: 20vw;
+		max-width: 205px;
+		max-height: 353px;
+
+		&--talk {
+			position: absolute;
+			bottom: 52%;
+			left: 23.5%;
+			width: 10vw;
+			height: 5vw;
+			max-width: 160px;
+			max-height: 77px;
+			opacity: 0;
+			animation: talk 2s 8s;
+		}
+
+		&--talk-two {
+			position: absolute;
+			bottom: 52%;
+			left: 23.5%;
+			width: 10vw;
+			height: 5vw;
+			max-width: 160px;
+			max-height: 77px;
+			opacity: 0;
+			animation: talk 3s 14s;
+		}
+	}
+
+	&__man--hand {
+		position: absolute;
+		bottom: 39%;
+		left: 25%;
+		transform-origin: 35% 100%;
+		width: 4vw;
+		height: 10vw;
+		max-width: 89px;
+		max-height: 128px;
+
+		transform: rotate(150deg);
+		animation: man-hand 3.5s 7.5s;
+	}
+
+	&__woman {
+		position: absolute;
+		bottom: 6%;
+		left: 17%;
+		width: 12vw;
+		height: 15vw;
+		max-width: 191px;
+		max-height: 268px;
+
+		&--talk {
+			position: absolute;
+			bottom: 41%;
+			left: 12%;
+			width: 10vw;
+			height: 7vw;
+			max-width: 160px;
+			max-height: 99px;
+			opacity: 0;
+			animation: talk 3.5s 4s;
+		}
+	}
+
+	&__woman--hand {
+		position: absolute;
+		bottom: 20%;
+		left: 19.5%;
+		width: 3vw;
+		height: 3vw;
+		max-width: 63px;
+		max-height: 44px;
+		animation: woman-hand 4s 3.5s;
+	}
+}

@@ -4,28 +4,31 @@
 		<form action="#" method="post" class="form">
 			<fieldset>
 				<div class="form__wrapper">
-					<label class="form__label-row" for="input-name">Name</label>
-					<input class="form__input-row form__text" type="text" id="input-name">
+					<label class=" form__label" for="input-name">Name</label>
+					<input class="form__input-row form__input" type="text" id="input-name">
 				</div>
 			</fieldset>
 			<fieldset class="form__2-rows">
-				<div class="form__wrapper">
-					<label class="form__label-2-rows" for="input-phone">Phone</label>
-					<input class="form__unput-2-rows form__text" type="tel" id="input-phone">
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label-2-rows form__label" for="input-phone">Phone</label>
+					<input class="form__unput-2-rows form__input" type="tel" id="input-phone">
 				</div>
-				<div class="form__wrapper">
-					<label class="form__label-2-rows" for="input-email">Email</label>
-					<input class="form__unput-2-rows form__text" type="email" id="input-email">
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label" for="input-email">Email</label>
+					<input class="form__unput-2-rows form__input" type="email" id="input-email">
 				</div>
 			</fieldset>
-			<fieldset>
-				<label class="form-area__label" for="textarea">Message</label>
-				<textarea class="form-area form__text" id="textarea"></textarea>
-			</fieldset>
+			<fieldset class="form__area">
+				<div class="form__wrapper">
+					<label class="form__label" for="textarea">Message</label>
+					<textarea class="form__area form__input" id="textarea"></textarea>
+			</div>
+		</fieldset>
 			<fieldset>
 				<div class="form__checkbox">
 					<label class="form__label">
 						@@include('checkbox/index.html', {
+						"type": "form",
 						"class": "checkbox",
 						"name": "popup",
 						"value": "yes",
@@ -57,28 +60,31 @@
 		<form action="#" method="post" class="form">
 			<fieldset>
 				<div class="form__wrapper">
-					<label class="form__label-row" for="input-name">Name</label>
-					<input class="form__input-row form__text" type="text" id="input-name" placeholder="Ivan Ivanov">
+					<label class=" form__label" for="input-name">Name</label>
+					<input class="form__input-row form__input" type="text" id="input-name">
 				</div>
 			</fieldset>
 			<fieldset class="form__2-rows">
-				<div class="form__wrapper">
-					<label class="form__label-2-rows" for="input-phone">Phone</label>
-					<input class="form__unput-2-rows form__text" type="tel" id="input-phone">
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label-2-rows form__label" for="input-phone">Phone</label>
+					<input class="form__unput-2-rows form__input" type="tel" id="input-phone">
 				</div>
-				<div class="form__wrapper">
-					<label class="form__label-2-rows" for="input-email">Email</label>
-					<input class="form__unput-2-rows form__text" type="email" id="input-email">
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label" for="input-email">Email</label>
+					<input class="form__unput-2-rows form__input" type="email" id="input-email">
 				</div>
 			</fieldset>
-			<fieldset>
-				<label class="form-area__label" for="textarea">Message</label>
-				<textarea class="form-area form__text" id="textarea"></textarea>
+			<fieldset class="form__area">
+				<div class="form__wrapper">
+					<label class="form__label" for="textarea">Message</label>
+					<textarea class="form__area form__input" id="textarea"></textarea>
+				</div>
 			</fieldset>
 			<fieldset>
 				<div class="form__checkbox">
 					<label class="form__label">
 						@@include('checkbox/index.html', {
+						"type": "form",
 						"class": "checkbox",
 						"name": "popup",
 						"value": "yes",

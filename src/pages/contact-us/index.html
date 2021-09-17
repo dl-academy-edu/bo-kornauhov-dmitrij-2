@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="description" content="DLK обратная связь ">
+	<meta name="description" content="DLK обратная связь">
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
 	<link href="/common.css" rel="stylesheet" />
 	<link href="style.css" rel="stylesheet" />
 	<link href="/normalize.css" rel="stylesheet" />
@@ -13,14 +14,18 @@
 </head>
 
 <body>
-	@@include('header/index.html')
-	<main>
-		@@include('breadcrumbs/index.html',{
+	@@include('header/index.html', {
+		"type": "pages"
+	})
+<main>
+	@@include('breadcrumbs/index.html',{
 		"type": "contact-us"
-		})
-		@@include('contact-us/index.html')
-	</main>
+	})
+	@@include('contact-us/index.html')
+</main>
 	@@include('footer/index.html')
+	@@include('menu/index.html')
+	<script src="scripts.js"></script>
 </body>
 
 </html>

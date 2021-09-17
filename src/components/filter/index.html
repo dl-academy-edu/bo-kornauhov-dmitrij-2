@@ -1,7 +1,7 @@
 <div class="filter">
-	<div class="container">
-		<form class="filter-form" action="#">
-			<fieldset class="filter-form__field-range filter-form__field-price">
+	<div class="container-content">
+		<form class="filter-form filter__form" action="#">
+			<fieldset class="filter-form__field-price">
 				<legend class="filter-form__legend">Cost</legend>
 				<input class="filter-form__range" type="range" name="cost" min="0" max="500" value="100" step="10">
 				<div class="filter-form__range-box">
@@ -9,90 +9,92 @@
 					<span class="filter-form__text">500</span>
 				</div>
 			</fieldset>
+			<div class="filter-form__mob">
 			<fieldset class="filter-form__field filter-form__field-color">
 				<legend class="filter-form__legend">Color</legend>
 				<ul class="filter-form__list">
 					<li class="filter-form__item-checkbox">
-						<label class="form__label">
+						<label class="filter__label">
 							@@include('checkbox/index.html', {
+							"type": "filter",
 							"class": "checkbox",
 							"name": "color",
 							"value": "yes",
 							"checked": "yes",
 							"disabled": "no",
-							"label": "check"
 							})
-							<span class="form__label-text">Black</span>
+							<span class="filter-form__checkbox filter-form__text ">Black</span>
 						</label>
 					</li>
 					<li class="filter-form__item-checkbox">
 						<label class="form__label">
 							@@include('checkbox/index.html', {
+							"type": "filter",
 							"class": "checkbox",
 							"name": "color",
 							"value": "yes",
 							"checked": "no",
 							"disabled": "no",
-							"label": "check"
 							})
-							<span class="form__label-text">Blue</span>
+							<span class="filter-form__checkbox filter-form__text">Blue</span>
 						</label>
 					</li>
 					<li class="filter-form__item-checkbox">
 						<label class="form__label">
 							@@include('checkbox/index.html', {
+							"type": "filter",
 							"class": "checkbox",
 							"name": "color",
 							"value": "yes",
 							"checked": "no",
 							"disabled": "no",
-							"label": "check"
 							})
-							<span class="form__label-text">Green</span>
+							<span class="filter-form__checkbox filter-form__text">Green</span>
 						</label>
 					</li>
 					<li class="filter-form__item-checkbox">
 						<label class="form__label">
 							@@include('checkbox/index.html', {
+							"type": "filter",
 							"class": "checkbox",
 							"name": "color",
 							"value": "yes",
 							"checked": "no",
 							"disabled": "no",
-							"label": "check"
 							})
-							<span class="form__label-text">White</span>
+							<span class="filter-form__checkbox filter-form__text">White</span>
 						</label>
 					</li>
 				</ul>
 			</fieldset>
 			<fieldset class="filter-form__field filter-form__field-delivery">
-				<legend class="filter-form__legend">Delivery</legend>
+				<legend class="filter-form__legend filter-form__text">Delivery</legend>
 				<ul class="filter-form__list">
 					<li class="filter-form__item">
 						<input class="filter-form__radio" type="radio" name="delivery" id="free">
-						<label class="filter-form__radio-label" for="free">Free shipping</label>
+						<label class="filter-form__radio-label filter-form__text" for="free">Free shipping</label>
 					</li>
 					<li class="filter-form__item">
 						<input class="filter-form__radio" type="radio" name="delivery" id="fast" checked>
-						<label class="filter-form__radio-label" for="fast">Fast shipping</label>
+						<label class="filter-form__radio-label filter-form__text" for="fast">Fast shipping</label>
 					</li>
 				</ul>
 			</fieldset>
+			</div>
 			<fieldset class="filter-form__field filter-form__field-pick">
 				<legend class="filter-form__legend">Amount</legend>
 				<ul class=" filter-form__list-pick">
-					<li class="filter-form__item">
+					<li>
 						<input class="filter-form__pick" type="radio" name="amount" id="pick-1" value="0-5" checked>
-						<label class="filter-form__pick-label" for="pick-1">0-5</label>
+						<label class="filter-form__pick-label filter-form__text" for="pick-1">0-5</label>
 					</li>
-					<li class="filter-form__item">
+					<li>
 						<input class="filter-form__pick" type="radio" name="amount" id="pick-2" value="10-20">
-						<label class="filter-form__pick-label" for="pick-2">10-20</label>
+						<label class="filter-form__pick-label filter-form__text" for="pick-2">10-20</label>
 					</li>
-					<li class="filter-form__item">
+					<li>
 						<input class="filter-form__pick" type="radio" name="amount" id="pick-3" value="20-50">
-						<label class="filter-form__pick-label" for="pick-3">20-50</label>
+						<label class="filter-form__pick-label filter-form__text" for="pick-3">20-50</label>
 					</li>
 				</ul>
 			</fieldset>

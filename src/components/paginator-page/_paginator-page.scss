@@ -1,12 +1,16 @@
+@import "./mixin";
 @import "./colors";
+@import "./vars";
 
 .page-paginator {
-	width: 1180px;
-	margin: 0 auto;
 	margin-bottom: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@include media(0, $m_tab) {
+		margin-bottom: 50px;
+	}
 
 	&__list {
 		display: flex;
@@ -19,52 +23,69 @@
 		&:last-child {
 			margin: 0;
 		}
+
+		@include media(0, $m_mob) {
+			margin-right: 52px;
+		}
 	}
 
 	&__link {
 		font-family: "Montserrat", "Tahoma", sans-serif;
 		font-weight: 700;
 		line-height: 19px;
-		width: 10px;
-		height: 20px;
+		font-size: 16px;
 		color: $c__black;
 		outline: none;
-		transition: 0.4s;
+		transition: $transition;
 
 		&:hover,
 		&:focus {
 			color: #aaa;
 		}
+
+		@include media(0, $m_mob) {
+			line-height: 17px;
+			font-size: 14px;
+		}
 	}
 
-	&-active {
+	&__link--active {
 		color: $c__brown;
 	}
-}
 
-.arrow {
-	background: none;
-	cursor: pointer;
+	&__arrow {
+		background: none;
+		cursor: pointer;
+	}
+
+	&__img {
+		@include media(0, $m_mob) {
+			width: 12px;
+			height: 24px;
+		}
+	}
 
 	&__img path {
 		opacity: 0.3;
-		transition: 0.4s;
+		transition: $transition;
 	}
 
-	&--left {
+	&__arrow--left {
 		transform: rotate(180deg);
 	}
 
-	&:hover &__img path,
-	&:focus &__img path {
+	&__arrow:hover &__img path,
+	&__arrow:focus &__img path {
 		stroke: $c__brown;
 		opacity: 1;
 	}
-	&:active &__img path {
+
+	&__arrow:active &__img path {
 		stroke: rgba(194, 153, 116, 0.7);
 		opacity: 1;
 	}
-	&:disabled {
+
+	&__arrow:disabled {
 		opacity: 0.2;
 		pointer-events: none;
 	}

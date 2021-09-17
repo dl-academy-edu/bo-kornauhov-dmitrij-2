@@ -1,6 +1,13 @@
+@import "./mixin";
 @import "./colors";
+@import "./vars";
 
 .blog {
+	margin: 50px 0 0 0;
+
+	@include media($m_mob, $m_tab) {
+		margin: 30px 0 0 0;
+	}
 
 	&__list {
 		display: flex;

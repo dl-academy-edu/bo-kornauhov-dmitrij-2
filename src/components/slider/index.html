@@ -1,11 +1,11 @@
 <section class="slider">
 	<div class="container">
 		<div class="slider__content">
-			<div class="slider__control">
-				<p class="slider-paginator__number">01</p>
+			<div class="slider__paginator slider-paginator">
+				<p class="slider__number">01</p>
 				<ul class="slider-paginator__list">
 					<li class="slider-paginator__item">
-						<button class="slider-paginator__button active" aria-label="slide1"></button>
+						<button class="slider-paginator__button slider-paginator__button--active" aria-label="slide1"></button>
 					</li>
 					<li class="slider-paginator__item">
 						<button class="slider-paginator__button" aria-label="slide2"></button>
@@ -28,8 +28,13 @@
 				"disabled": "no"
 				})
 			</div>
-			<img class="slider__img" src="/static/images/slider-alien.png" alt="slider" width=636 height=461>
-			<div class="slider-bottom">
+			<picture>
+			<source srcset="/static/images/slider-alien.png, /static/images/slider-alien2x.png 2x" media="(min-width: 1120px)">
+			<source srcset="/static/images/slider-alien-tablet.png, /static/images/slider-alien-tablet2x.png 2x " media="(min-width: 768px) and (max-width: 1119px)">
+			<source srcset="/static/images/slider-alien-mobile.png, /static/images/slider-alien-mobile2x.png 2x " media="(max-width: 767px)">
+			<img class="slider__img" src="/static/images/slider-alien.png" alt="slider">
+			</picture>
+			<div class="slider-bottom slider__bottom">
 				<p class="slider-bottom__text">free (continental) usa shipping on all orders of $100 usd or more!</p>
 			</div>
 		</div>

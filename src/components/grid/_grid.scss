@@ -1,0 +1,507 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+.grid {
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: 215px;
+		font-family: "lato", "arial", sans-serif;
+
+		@include media($m_mob, $m_tab) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 278px 430px 430px 430px 350px 350px 215px;
+		}
+
+		@include media(0, $m_mob) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 278px 530px 322px 309px 512px 300px 200px 596px 320px;
+		}
+	}
+
+	&__title {
+		font-size: 22px;
+		line-height: 26px;
+		font-weight: 500;
+	}
+
+	&__subtitle {
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 700;
+		color: #bcbcbe;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 500px;
+		color: #bcbcbe;
+	}
+
+	&__link {
+		color: #2198f4;
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	&-phone {
+		grid-column: 1 / 3;
+		grid-row: 1 / 3;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 0 80px;
+		background-color: $c__white;
+
+		@include media($m_tab, 1250px) {
+			padding: 0 20px;
+		}
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 1 / 3;
+			grid-row: 2 / 3;
+			padding: 0 114px;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 2 / 3;
+			flex-direction: column;
+			align-items: center;
+			padding: 30px 20px 0 20px;
+		}
+
+		&__box {
+			max-width: 220px;
+			align-self: center;
+
+			@include media(0, $m_mob) {
+				max-width: 335px;
+				margin-bottom: 40px;
+			}
+		}
+
+		&__title {
+			margin: 10px 0 20px 0;
+		}
+
+		&__img,
+		picture {
+			line-height: 0;
+		}
+	}
+
+	&-how {
+		grid-column: 3 / 5;
+		grid-row: 1 / 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: #f7f8fa;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 1 / 2;
+			text-align: start;
+			align-items: start;
+			padding: 30px 20px;
+		}
+
+		&__title {
+			font-size: 48px;
+			line-height: 58px;
+			font-weight: 700;
+			max-width: 450px;
+			margin: 20px 0 10px 0;
+
+			@include media(0, $m_tab) {
+				font-size: 35px;
+				line-height: 42px;
+				max-width: 500px;
+				margin: 20px 0 40px 0;
+			}
+
+			@include media(0, $m_mob) {
+				max-width: 335px;
+			}
+		}
+
+		&__link {
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 500;
+			text-transform: capitalize;
+		}
+	}
+
+	&-keyboard {
+		grid-column: 1 / 2;
+		grid-row: 3 / 5;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background: #ef5539;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+			padding: 0 35px;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 3 / 4;
+		}
+
+		&__title {
+			font-weight: 700;
+			max-width: 170px;
+			color: $c__white;
+
+			margin: 10px 0 20px 0;
+		}
+
+		&__link {
+			color: #ffc80a;
+		}
+	}
+
+	&-imac {
+		grid-column: 2 / 4;
+		grid-row: 3 / 5;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		background: $c__white;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 1 / 3;
+			grid-row: 4 / 5;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 5 / 6;
+			flex-direction: column;
+			padding: 30px 0;
+			margin: 0 auto;
+		}
+
+		&__title {
+			margin-top: 10px;
+		}
+
+		&__text {
+			margin-bottom: 20px;
+		}
+
+		&__img,
+		picture {
+			align-self: flex-end;
+			order: 2;
+			line-height: 0;
+
+			@include media(0, $m_mob) {
+				order: 1;
+				align-self: center;
+			}
+		}
+
+		&__left {
+			max-width: 160px;
+			margin-left: 95px;
+			margin-top: 108px;
+			order: 0;
+
+			@include media($m_tab, 1250px) {
+				margin-left: 25px;
+			}
+
+			@include media($m_mob, $m_tab) {
+				margin-left: 129px;
+			}
+
+			@include media(0, $m_mob) {
+				margin: 0 0 10px 0;
+				max-width: 150px;
+			}
+
+			@include media(0, 400px) {
+				padding: 0 20px;
+				max-width: 200px;
+			}
+		}
+
+		&__right {
+			max-width: 260px;
+			margin-right: 95px;
+			margin-top: 108px;
+			order: 1;
+
+			@include media($m_tab, 1250px) {
+				margin-right: 25px;
+			}
+
+			@include media($m_mob, $m_tab) {
+				margin-right: 129px;
+			}
+
+			@include media(0, $m_mob) {
+				order: 2;
+				max-width: 360px;
+				margin: 10px 0 0 0;
+			}
+
+			@include media(0, 400px) {
+				padding: 0 20px;
+			}
+		}
+	}
+
+	&-cloud {
+		grid-column: 4 / 5;
+		grid-row: 3 / 7;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		flex-direction: column;
+		background: #8f75bc;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 2 / 3;
+			grid-row: 5 / 7;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 8 / 9;
+		}
+
+		&__top {
+			width: 300px;
+			height: 300px;
+			background: #8066b0;
+			border-radius: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 32px 0;
+			margin-bottom: 20px;
+		}
+
+		&__popular {
+			margin: 0 0 15px 0;
+			padding: 5px 15px;
+			display: inline-block;
+			align-self: center;
+
+			font-size: 10px;
+			line-height: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $c__white;
+
+			background: #8972b6;
+			border-radius: 10px;
+		}
+
+		&__meet {
+			font-size: 12px;
+			line-height: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $c__white;
+		}
+
+		&__title {
+			color: $c__white;
+			font-size: 32px;
+			line-height: 38px;
+			font-weight: 700;
+		}
+
+		&__text {
+			color: $c__white;
+			max-width: 230px;
+			margin: 10px 0 30px 0;
+		}
+
+		&__link {
+			color: #2c3036;
+			display: inline-block;
+			background: #ffc80c;
+			width: 159px;
+			padding: 19px 41px;
+			border-radius: 27px;
+		}
+	}
+
+	&-notebook {
+		grid-column: 1 / 3;
+		grid-row: 5 / 7;
+		background: #93b7b7;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 6 / 7;
+		}
+
+		&__choice {
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			margin: 0;
+			font-size: 8px;
+			line-height: 10px;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: $c__white;
+			background: #fa684f;
+			padding: 3px 5px;
+			border-radius: 3px;
+
+			@include media(0, $m_mob) {
+				left: 20px;
+			}
+		}
+
+		&__title {
+			color: $c__white;
+			max-width: 200px;
+			margin-top: 70px;
+
+			@include media($m_mob, $m_tab) {
+				margin-top: 96px;
+			}
+		}
+
+		&__img,
+		picture {
+			line-height: 0;
+		}
+	}
+
+	&-games {
+		grid-column: 3 / 4;
+		grid-row: 5 / 7;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: #f7f8fa;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 4 / 5;
+		}
+
+		&__title {
+			margin: 10px 0 20px 0;
+		}
+	}
+
+	&-follow {
+		grid-column: 1 / 2;
+		grid-row: 7 / 8;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: #f7f8fa;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 1 / 2;
+			grid-row: 6 / 7;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 7 / 8;
+		}
+
+		&__link {
+			margin-top: 15px;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&-tv {
+		grid-column: 2 / 5;
+		grid-row: 7 / 8;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #2c2c2c;
+
+		@include media($m_mob, $m_tab) {
+			grid-column: 1 / 3;
+		}
+
+		@include media(0, $m_mob) {
+			grid-column: 1;
+			grid-row: 9 / 10;
+			flex-direction: column;
+			justify-content: start;
+			padding: 0 0 0 30px;
+		}
+
+		&__title {
+			color: $c__white;
+			max-width: 200px;
+			font-weight: 500;
+			margin-left: 80px;
+			display: flex;
+
+			@include media(0, $m_mob) {
+				text-align: center;
+				margin: 0;
+			}
+		}
+
+		&__img,
+		picture {
+			line-height: 0;
+		}
+	}
+}

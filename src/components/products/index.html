@@ -1,39 +1,112 @@
-<section class="products">
-	<div class="container">
-		<h2 class="products__title title__two">category products</h2>
-		<ul class="products-list">
-			@@include('catalog-item/index.html',{
-			"title": "Apparel Kids",
-			"alt": "Apparel Kids",
-			"img": "1",
-			"link": "#"
-			})
-			@@include('catalog-item/index.html',{
-			"title": "Holiday Shop",
-			"alt": "Holiday Shop",
-			"img": "2",
-			"link": "#"
-			})
-			@@include('catalog-item/index.html',{
-			"title": "Toys",
-			"alt": "Toys",
-			"img": "3",
-			"link": "/pages/toys/index.html"
-			})
-			@@include('catalog-item/index.html',{
-			"title": "Accessories",
-			"alt": "Accessories",
-			"img": "4",
-			"link": "#"
-			})
-		</ul>
-		<div class="products-bar__button">
-			<button class="arrow__button" aria-label="product-arrow"><img src="/static/images/button-arrow.svg"
-					alt="Arrow left" width="18" height="30"></button>
-			<button class="arrow__button right" aria-label="product-arrow"><img src="/static/images/button-arrow.svg"
-					alt="Arrow right" width="18" height="30"></button>
-			<p class="products-bar__text text">Modern finds for the modern home. Curated goods by unique designers around
-				the world from fashion to furniture for kids and adults.</p>
+@@if (type ==='main') {
+	<section class="products">
+		<div class="container-products">
+			<h2 class="products__title title__two">category products</h2>
+			<div class="products__wrapper">
+				<ul class="products__list">
+					@@include('products-item/index.html',{
+					"title": "Apparel Kids",
+					"alt": "Apparel Kids",
+					"img": "1",
+					"link": "#"
+					})
+					@@include('products-item/index.html',{
+					"title": "Holiday Shop",
+					"alt": "Holiday Shop",
+					"img": "2",
+					"link": "#"
+					})
+					@@include('products-item/index.html',{
+					"title": "Toys",
+					"alt": "Toys",
+					"img": "3",
+					"link": "/pages/toys/index.html"
+					})
+					@@include('products-item/index.html',{
+					"title": "Accessories",
+					"alt": "Accessories",
+					"img": "4",
+					"link": "#"
+					})
+				</ul>
+			</div>
+			<div class="products-bar">
+				<button class="products-bar__button" aria-label="product-arrow"><img class="products-bar__img"
+						src="/static/images/button-arrow.svg" alt="Arrow left" width="18" height="30"></button>
+				<button class="products-bar__button" aria-label="product-arrow"><img
+						class="products-bar__img products-bar__img--right" src="/static/images/button-arrow.svg" alt="Arrow right"
+						width="18" height="30"></button>
+				<p class="products-bar__text text">Modern finds for the modern home. Curated goods by unique designers around
+					the world from fashion to furniture for kids and adults.</p>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+}
+
+@@if (type ==='page') {
+	<section class="products">
+		<div class="container-content">
+				<ul class="products__list">
+					@@include('products-item/item-page.html',{
+					"title": "Apparel Kids",
+					"alt": "Apparel Kids",
+					"img": "1",
+					"link": "#"
+					})
+					@@include('products-item/item-page.html',{
+					"title": "Holiday Shop",
+					"alt": "Holiday Shop",
+					"img": "2",
+					"link": "#"
+					})
+					@@include('products-item/item-page.html',{
+					"title": "Toys",
+					"alt": "Toys",
+					"img": "3",
+					"link": "/pages/toys/index.html"
+					})
+					@@include('products-item/item-page.html',{
+					"title": "Accessories",
+					"alt": "Accessories",
+					"img": "4",
+					"link": "#"
+					})
+					@@include('products-item/item-page.html',{
+					"title": "Sale",
+					"alt": "Sale",
+					"img": "5",
+					"link": "#"
+					})
+					@@include('products-item/item-page.html',{
+					"title": "Apparel Adults",
+					"alt": "Apparel Adults",
+					"img": "6",
+					"link": "#"
+					})
+				</ul>
+				<div class="products-box">
+					<h2 class="products-box__title title__two">Product Description</h2>
+					<p class="products-box__text text">
+						Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can
+						even
+						bathe her,
+						just like a little sister.
+					</p>
+					<p class="products-box__text text">
+						A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be
+						an
+						excellent
+						choice for a gift for a girl from 4 years old.
+					</p>
+					<p class="products-box__text text">
+						The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of
+						hairpins
+						and elastic
+						bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
+					</p>
+			</div>
+		</div>
+	</section>
+}
+
+

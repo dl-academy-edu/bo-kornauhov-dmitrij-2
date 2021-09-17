@@ -1,37 +1,88 @@
+@import "./mixin";
 @import "./colors";
+@import "./vars";
 
 .slider {
 	&__content {
 		display: flex;
 		position: relative;
-		margin-top: 129px;
+		margin: 129px 0 90px 0;
 		background: #eee4db;
+
+		@include media($m_mob, $m_tab) {
+			margin: 0 0 60px 0;
+		}
+
+		@include media(0, $m_mob) {
+			margin: 0 0 80px 0;
+		}
 	}
 
-	&__control {
-		margin-top: 18px;
+	&__paginator {
 		margin-left: 28px;
 	}
-	
-	&-paginator__number {
+
+	&__number {
+		position: absolute;
+		top: 19px;
+		left: 31px;
+		margin: 0;
 		font-family: "Montserrat", "Tahoma", sans-serif;
 		font-weight: 300;
 		font-size: 60px;
 		line-height: 73px;
 		color: rgba(30, 6, 6, 0.05);
+
+		@include media(0, $m_tab) {
+			font-size: 48px;
+			line-height: 58px;
+			top: 20px;
+			left: 0;
+		}
+
+		@include media(0, $m_mob) {
+			font-size: 48px;
+			line-height: 58px;
+			top: 20px;
+			left: auto;
+			right: 20px;
+
+			@include media(0, 350px) {
+				right: -5px;
+			}
+		}
 	}
 
 	&-paginator__list {
 		position: absolute;
 		top: 78px;
 		left: 31px;
+
+		@include media($m_mob, $m_tab) {
+			top: 60px;
+			left: 0;
+		}
+
+		@include media(0, $m_mob) {
+			top: 55px;
+			left: auto;
+			right: 20px;
+		}
+
+		@include media(0, 350px) {
+			right: 5px;
+		}
 	}
 
 	&-paginator__item {
-			width: 31px;
-			height: 3px;
-			margin: 11px 0;
+		width: 31px;
+		height: 3px;
+		margin: 11px 0;
+
+		@include media(0, $m_tab) {
+			width: 27px;
 		}
+	}
 
 	&-paginator__button {
 		width: 31px;
@@ -39,20 +90,45 @@
 		cursor: pointer;
 		background-color: #d6cac2;
 		outline: none;
+		transition: $transition;
 
 		&:hover,
 		&:focus {
 			background-color: rgba(30, 6, 6, 0.6);
 		}
-	}
 
-	.active {
-		background-color: rgba(30, 6, 6, 0.6);
+		&--active {
+			background-color: rgba(30, 6, 6, 0.6);
+		}
+
+		@include media(0, $m_tab) {
+			width: 27px;
+		}
 	}
 
 	&__info {
-		margin: 92px 6px 128px 45px;
+		margin: 93px 0 128px 105px;
 		max-width: 310px;
+		align-self: center;
+
+		@include media(630px, $m_tab) {
+			margin: 80px 0 100px 40px;
+		}
+
+		@include media(0, 680px) {
+			margin: 75px 0 240px 0;
+		}
+
+		@include media(0, 350px) {
+			margin: 70px 0 240px -20px;
+		}
+	}
+
+	&__title {
+		@include media(0, 680px) {
+			font-size: 36px;
+			line-height: 40px;
+		}
 	}
 
 	&__text {
@@ -67,6 +143,20 @@
 		position: absolute;
 		right: 99px;
 		bottom: 39px;
+
+		@include media($m_mob, $m_tab) {
+			right: 8px;
+		}
+
+		@include media(0, $m_mob) {
+			right: 0;
+			bottom: 38px;
+		}
+
+		@include media(0, 465px) {
+			right: 0;
+			bottom: 54px;
+		}
 	}
 
 	&-bottom {
@@ -75,9 +165,13 @@
 		bottom: 0;
 		padding: 12px 0 11px 0;
 		background-color: $c__brown;
+
+		@include media(0, $m_mob) {
+			padding: 11px 8px;
+		}
 	}
 
-	&-bottom__text{
+	&-bottom__text {
 		font-family: "Open sans", "Arial", sans-serif;
 		line-height: 16px;
 		font-size: 12px;
@@ -86,5 +180,4 @@
 		text-transform: uppercase;
 		color: $c__white;
 	}
-
 }
