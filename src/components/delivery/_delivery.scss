@@ -78,6 +78,11 @@
 
 	&__item {
 		height: 55px;
+		margin-bottom: 5px;
+
+		&:last-child {
+			margin: 0;
+		}
 
 		@include media(0, $m_tab) {
 			height: 45px;
