@@ -18,8 +18,20 @@
 	}
 
 	&__img {
+		max-width: 380px;
+		height: 220px;
 		display: block;
-		background: #f0f0f0;
+		background-color: #dfe4ea;
+
+		@include media($m_mob, $m_tab) {
+			max-width: 314px;
+			height: 182px;
+		}
+
+		@include media(0, $m_mob) {
+			max-width: 335px;
+			height: 194px;
+		}
 	}
 
 	&__link {

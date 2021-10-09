@@ -3,19 +3,20 @@
 @import "./vars";
 
 .contact-us {
-	margin: 0 0 60px 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
 
-	@include media(0, $m_tab) {
-		margin: 0 0 50px 0;
+	@include media(0, $m_pc) {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	&__content {
-		display: flex;
-		justify-content: space-between;
+		margin: 0 0 60px 0;
 
-		@include media(0, $m_pc) {
-			flex-wrap: wrap;
-			justify-content: center;
+		@include media(0, $m_tab) {
+			margin: 0 0 50px 0;
 		}
 	}
 
@@ -58,6 +59,14 @@
 
 		@include media(0, $m_mob) {
 			font-size: 24px;
+		}
+	}
+
+	.container {
+		padding: 0;
+
+		@include media(0, 580px) {
+			padding: 0 10px;
 		}
 	}
 }

@@ -14,8 +14,6 @@
 	}
 
 	&__list {
-		margin: -10px;
-		display: flex;
 		flex-wrap: wrap;
 
 		@include media(0, $m_mob) {
@@ -30,22 +28,29 @@
 	&__item {
 		margin: 10px 10px 12px 10px;
 
-		@include media(480px, $m_tab) {
+		@include media($m_mob, $m_tab) {
 			width: 203px;
 			height: 196px;
+			margin: 10px 10px 10px 10px;
 		}
 
 		@include media(991px, $m_tab) {
 			width: 214px;
 		}
 
-		@include media(0, 480px) {
+		@include media(0, $m_mob) {
 			width: 159px;
-			height: 156px;
+			height: 155px;
 			margin: 8px;
 		}
 
-		@include media(0, 370px) {
+		@include media(0, 630px) {
+			width: 140px;
+			height: 155px;
+			margin: 8px;
+		}
+
+		@include media(0, 350px) {
 			width: 135px;
 			height: 156px;
 			margin: 5px;

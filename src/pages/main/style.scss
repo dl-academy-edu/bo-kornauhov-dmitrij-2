@@ -37,7 +37,6 @@
 	}
 
 	&__list {
-		margin: 0 -10px;
 		width: min-content;
 
 		@include media($m_mob, $m_tab) {

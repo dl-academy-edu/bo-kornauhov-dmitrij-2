@@ -64,7 +64,7 @@
 		background-color: $c__white;
 
 		@include media($m_tab, 1250px) {
-			padding: 0 20px;
+			padding: 0 10px;
 		}
 
 		@include media($m_mob, $m_tab) {
@@ -121,6 +121,10 @@
 			grid-row: 1 / 2;
 			text-align: start;
 			align-items: start;
+			padding: 30px 60px;
+		}
+
+		@include media(0, $m_mob--md) {
 			padding: 30px 20px;
 		}
 
@@ -388,7 +392,7 @@
 			font-weight: 700;
 			color: $c__white;
 			background: #fa684f;
-			padding: 3px 5px;
+			padding: 5px 5px;
 			border-radius: 3px;
 
 			@include media(0, $m_mob) {

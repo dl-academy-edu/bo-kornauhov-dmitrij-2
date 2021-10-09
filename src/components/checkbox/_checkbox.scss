@@ -47,8 +47,8 @@
 		border-radius: 3px;
 
 		@include media(0, $m_mob) {
-			width: 17px;
-			height: 17px;
+			width: 18px;
+			height: 18px;
 		}
 	}
 
@@ -56,19 +56,19 @@
 		display: block;
 		position: absolute;
 		top: -0.1px;
-		left: 0;
+		left: 0.4px;
 		opacity: 0;
 		width: 15px;
 		height: 15px;
-		background-color: #fff;
+		background-color: $c__white;
 		background-image: url("/static/images/check-mark.svg");
 		content: "";
 
 		@include media(0, $m_mob) {
-			top: 0;
-			left: 0;
-			width: 13px;
-			height: 13px;
+			top: 0px;
+			left: 0px;
+			width: 14px;
+			height: 14px;
 		}
 	}
 

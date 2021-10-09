@@ -19,9 +19,18 @@
 	}
 
 	&__img {
-		background-color: #c7deec;
 		margin: 0 60px 0 0;
+		background-color: #c7deec;
 		max-width: 480px;
+		min-width: 480px;
+		height: 559px;
+		display: block;
+
+		@include media($m_mob, $m_tab) {
+			max-width: 258px;
+			min-width: 258px;
+			height: 512px;
+		}
 
 		@include media($m_mob--md, $m_tab) {
 			margin-right: 6px;
@@ -29,10 +38,14 @@
 
 		@include media(0, $m_mob) {
 			margin: 0;
+			max-width: 335px;
+			min-width: 335px;
+			height: 357px;
 		}
 
 		@include media(0, 380px) {
-			width: 280px;
+			max-width: 285px;
+			min-width: 285px;
 		}
 	}
 
@@ -77,15 +90,8 @@
 	}
 
 	&__item {
-		height: 55px;
-		margin-bottom: 5px;
-
 		&:last-child {
 			margin: 0;
-		}
-
-		@include media(0, $m_tab) {
-			height: 45px;
 		}
 	}
 
