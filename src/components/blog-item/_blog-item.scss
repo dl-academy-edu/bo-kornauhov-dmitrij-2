@@ -32,6 +32,11 @@
 			max-width: 335px;
 			height: 194px;
 		}
+
+		@include media(0, 370px) {
+			max-width: 290px;
+			height: 194px;
+		}
 	}
 
 	&__link {
