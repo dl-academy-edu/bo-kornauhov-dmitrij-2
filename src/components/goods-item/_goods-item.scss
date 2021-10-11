@@ -1,0 +1,99 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+.goods {
+	&__item {
+		width: 33.33%;
+		padding: 0 10px;
+		margin-bottom: 20px;
+
+		@include media(0, $m_mob) {
+			width: 50%;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		margin: 27px 0 17px 0;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: #1e0606;
+
+		@include media(0, $m_tab) {
+			margin: 15px 0 5px 0;
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+	&__price {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 22px;
+		color: $c__black;
+
+		@include media($m_mob, $m_tab) {
+			font-size: 14px;
+			line-height: 19px;
+		}
+
+		@include media(0, $m_mob) {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		outline: none;
+	}
+
+	&__link::before {
+		position: absolute;
+		top: 38%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 207px;
+		height: 207px;
+		padding: 82px 12px 96px 11px;
+		background-color: #e5eaf8;
+		color: $c__black;
+		content: "learn more";
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-size: 26px;
+		line-height: 29px;
+		font-weight: 700;
+		text-transform: uppercase;
+		opacity: 0;
+		cursor: pointer;
+		transition: $transition;
+
+		@include media($m_mob, $m_tab) {
+			width: 150px;
+			height: 80px;
+			padding: 40px 12px 96px 11px;
+			font-size: 25px;
+		}
+
+		@include media(0, $m_mob) {
+			width: 120px;
+			height: 60px;
+			padding: 30px 12px 76px 11px;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__link:focus::before,
+	&__link:hover::before {
+		opacity: 0.8;
+	}
+
+	&__link:active::before {
+		opacity: 0.5;
+	}
+}

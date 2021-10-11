@@ -1,0 +1,146 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+.widget {
+	.container {
+		@include media(0, $m_mob--md) {
+			padding: 0;
+		}
+	}
+	&__content {
+		display: flex;
+		align-items: start;
+		margin: 0 0 147px 0;
+
+		@include media($m_mob, $m_tab) {
+			margin: 0 0 125px 0;
+		}
+
+		@include media(0, $m_mob) {
+			flex-wrap: wrap;
+			margin: 0 0 148px 0;
+		}
+	}
+
+	&-design {
+		max-width: 543px;
+		padding: 0 30px 27px 30px;
+		background: #e1f0f7;
+		margin-right: 57px;
+
+		@include media($m_mob--md, $m_tab) {
+			margin: 0 20px 0 0;
+			padding: 0 15px 27px 15px;
+		}
+
+		@include media(0, $m_mob) {
+			width: 100%;
+			margin: 0 auto 50px auto;
+			padding: 0 20px 20px 30px;
+		}
+
+		&__title {
+			margin: -25px 0 15px 0;
+
+			@include media($m_mob--md, $m_tab) {
+				font-size: 30px;
+				line-height: 36px;
+				width: 282px;
+				margin: -17px 0 15px 0;
+			}
+
+			@include media(0, $m_mob) {
+				font-size: 24px;
+				line-height: 29px;
+				margin-top: -15px;
+			}
+		}
+
+		&__subtitle {
+			margin: 0 0 10px 0;
+			font-family: "Crimson Text", "Georgia", serif;
+			font-style: italic;
+			font-size: 26px;
+
+			@include media(0, $m_mob) {
+				font-size: 24px;
+			}
+		}
+
+		&__button {
+			max-width: 123px;
+			margin: 20px 0 0 0;
+		}
+	}
+
+	&-contact {
+		position: relative;
+		max-width: 543px;
+		padding: 10px 30px 102px 30px;
+		background: #e1f0f7;
+
+		@include media($m_mob--md, $m_tab) {
+			padding: 10px 15px 102px 15px;
+		}
+
+		@include media(0, $m_mob) {
+			width: 100%;
+			margin: 0 auto 24px auto;
+			padding: 0 20px 102px 20px;
+		}
+
+		&__title {
+			margin-top: -35px;
+
+			@include media($m_mob--md, $m_tab) {
+				font-size: 30px;
+				line-height: 36px;
+				margin-top: -28px;
+			}
+
+			@include media(0, $m_mob) {
+				font-size: 24px;
+				line-height: 29px;
+				margin-top: -15px;
+			}
+		}
+
+		&__text {
+			margin: 20px 0 0 0;
+		}
+	}
+
+	&__map {
+		position: absolute;
+		padding: 0 30px 0 0;
+
+		@include media($m_mob--md, $m_tab) {
+			padding: 0 10px 0 0;
+		}
+
+		iframe {
+			margin: 20px 0 0 0;
+			border: none;
+			background: #ededee;
+			max-width: 100%;
+
+			@include media($m_mob--md, $m_tab) {
+				margin: 23px 0 0 0;
+				height: 50%;
+			}
+
+			@include media(0, $m_mob) {
+				height: 200px;
+				margin: 15px 0 0 0;
+			}
+		}
+	}
+}
+
+.text {
+	@include media(0, $m_mob) {
+		font-size: 14px;
+		line-height: 19px;
+	}
+}

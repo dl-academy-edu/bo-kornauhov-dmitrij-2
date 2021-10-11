@@ -1,0 +1,142 @@
+.title {
+	&__one {
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 44px;
+		color: #1e0606;
+		text-transform: uppercase;
+	}
+
+	&__two {
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-weight: 700;
+		font-size: 38px;
+		line-height: 46px;
+		color: #1e0606;
+		text-transform: uppercase;
+	}
+}
+
+.text {
+	font-family: "Open sans", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #1e0606;
+}
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./slider/slider";
+@import "./button/button";
+@import "./products/products";
+@import "./products-item/products-item";
+@import "./delivery/delivery";
+@import "./brands/brands";
+@import "./widget/widget";
+@import "./footer/footer";
+@import "./form/form";
+@import "./checkbox/checkbox";
+@import "./breadcrumbs/breadcrumbs";
+@import "./contact-us/contact-us";
+@import "./filter/filter";
+@import "./goods/goods";
+@import "./goods-item/goods-item";
+@import "./paginator-page/paginator-page";
+@import "./blog/blog";
+@import "./blog-item/blog-item";
+@import "./star/star";
+@import "./svg/svg";
+@import "./animation/animation";
+@import "./menu/menu";
+@import "./grid/grid";
+@import "./normalize";
+// Подключение компонентов
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	@include media($m_tab, $m_pc) {
+		padding: 0 40px;
+	}
+
+	@include media($m_mob--md, $m_tab) {
+		padding: 0 60px;
+	}
+
+	@include media(0, $m_mob--md) {
+		padding: 0 20px;
+	}
+}
+
+body {
+	font-family: "Open sans", "Arial", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul,
+p,
+button {
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	border: none;
+	border-radius: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #1e0606;
+	text-decoration: none;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.body_scroll {
+	overflow: hidden;
+}
+
+.active {
+	display: block;
+}
+
+.disabled {
+	display: none;
+}

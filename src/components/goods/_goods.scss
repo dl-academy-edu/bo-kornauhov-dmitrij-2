@@ -1,0 +1,22 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+.goods {
+	margin: 60px 0 50px 0;
+
+	@include media($m_mob, $m_tab) {
+		margin: 40px 0 30px 0;
+	}
+
+	@include media(0, $m_mob) {
+		margin: 40px 0 20px 0;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		margin: 0 -10px;
+	}
+}

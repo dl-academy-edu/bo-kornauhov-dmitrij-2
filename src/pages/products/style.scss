@@ -1,0 +1,129 @@
+@import "../../components/mixin";
+@import "../../components/colors";
+@import "../../components/vars";
+
+.products {
+	margin: 50px 0 60px 0;
+
+	@include media($m_mob, $m_tab) {
+		margin: 30px 0 50px 0;
+	}
+
+	@include media(0, $m_mob) {
+		margin: 20px 0 50px 0;
+	}
+
+	&__list {
+		flex-wrap: wrap;
+
+		@include media(0, $m_mob) {
+			margin: -8px;
+		}
+
+		@include media(0, 1160px) {
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		margin: 10px 10px 12px 10px;
+
+		@include media($m_mob, $m_tab) {
+			width: 203px;
+			height: 196px;
+			margin: 10px 10px 10px 10px;
+		}
+
+		@include media(991px, $m_tab) {
+			width: 214px;
+		}
+
+		@include media(0, $m_mob) {
+			width: 159px;
+			height: 155px;
+			margin: 8px;
+		}
+
+		@include media(0, 630px) {
+			width: 140px;
+			height: 155px;
+			margin: 8px;
+		}
+
+		@include media(0, 350px) {
+			width: 135px;
+			height: 156px;
+			margin: 5px;
+		}
+
+		&--title {
+			@include media($m_mob, $m_tab) {
+				font-size: 24px;
+				line-height: 29px;
+			}
+
+			@include media(0, $m_mob) {
+				font-size: 18px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	&__item:nth-child(6n + 4) {
+		margin-left: 210px;
+
+		@include media(0, 1160px) {
+			margin-left: 10px;
+		}
+
+		@include media(0, $m_mob) {
+			margin-left: 8px;
+		}
+
+		@include media(0, 370px) {
+			margin-left: 5px;
+		}
+	}
+
+	&-box {
+		max-width: 675px;
+		margin: 55px 0 59px 200px;
+
+		@include media(0, 1160px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include media($m_mob, $m_tab) {
+			margin: 30px 0 0 0;
+		}
+
+		@include media(0, $m_mob) {
+			margin: 20px 0 0 0;
+		}
+
+		&__title {
+			margin-bottom: 25px;
+
+			@include media($m_mob, $m_tab) {
+				margin-bottom: 20px;
+				font-size: 36px;
+				line-height: 44px;
+			}
+
+			@include media(0, $m_mob) {
+				margin-bottom: 15px;
+				font-size: 24px;
+				line-height: 29px;
+			}
+		}
+
+		&__text {
+			margin-bottom: 15px;
+		}
+
+		&__text:last-child {
+			margin: 0;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+.form {
+	position: relative;
+	max-width: 680px;
+	min-width: 600px;
+	background-color: #e5eaf8;
+	padding: 24px 40px;
+	font-size: 14px;
+	line-height: 16px;
+
+	@include media($m_mob, $m_tab) {
+		padding: 44px 56px;
+		width: 648px;
+	}
+
+	@include media(0, $m_mob) {
+		padding: 15px 25px;
+		width: 100%;
+		min-width: 280px;
+	}
+
+	&__content {
+		position: fixed;
+		margin: auto;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		border: none;
+		outline: 1px solid rgba(0, 0, 0, 0.2);
+		font-family: "Open Sans", "Arial", sans-serif;
+		padding: 14px 20px;
+		font-size: 18px;
+		line-height: 25px;
+		color: $c__black;
+
+		&:hover,
+		&:focus {
+			outline: 2px solid $c__brown;
+		}
+
+		&:disabled {
+			outline: 2px solid #ebebeb;
+			background-color: $c__white;
+		}
+
+		&::placeholder {
+			color: $c__black;
+		}
+
+		@include media(0, $m_mob) {
+			padding: 11px 20px 11px 14px;
+		}
+	}
+
+	&__label {
+		margin: 20px 0 6px 0;
+
+		@include media(0, $m_mob) {
+			margin: 15px 0 5px 0;
+		}
+	}
+
+	&__2-rows {
+		display: flex;
+
+		@include media(0, $m_mob) {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+
+		&--50 {
+			&:first-child {
+				margin-right: 20px;
+
+				@include media(0, $m_mob) {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	&__area {
+		min-height: 150px;
+		resize: none;
+	}
+
+	&__checkbox {
+		margin: 20px 0;
+		align-items: center;
+
+		@include media(0, $m_mob) {
+			margin: 15px 0;
+		}
+	}
+
+	&__label-text {
+		display: block;
+		font-family: "Roboto", sans-serif;
+		padding-left: 35px;
+		padding-top: 3px;
+
+		@include media(0, $m_mob) {
+			padding-top: 2px;
+		}
+	}
+
+	&__close {
+		background-color: transparent;
+		position: absolute;
+		top: 0;
+		right: -25px;
+		outline: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			opacity: 0.7;
+		}
+		&:active {
+			opacity: 0.4;
+		}
+
+		@include media(0, $m_tab) {
+			top: -30px;
+			right: 0;
+		}
+	}
+}
+
+.checkbox:focus ~ .form__label-text,
+.form__label-text:hover {
+	text-decoration: underline;
+}

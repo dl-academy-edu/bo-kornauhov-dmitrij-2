@@ -1,0 +1,45 @@
+<section class="delivery">
+	<div class="container">
+		<div class="delivery__content">
+			<picture>
+			<source srcset="/static/images/delivery.jpg, /static/images/delivery2x.jpg 2x" media="(min-width: 1024px)">
+			<source srcset="/static/images/delivery-tablet.jpg, /static/images/delivery-tablet2x.jpg 2x"
+				media="(min-width: 768px) and (max-width: 1023px)">
+			<source srcset="/static/images/delivery-mobile.jpg, /static/images/delivery-mobile2x.jpg 2x"
+				media="(max-width: 767px)">
+			<img class="delivery__img" src="/static/images/delivery.jpg" alt="delivery">
+			</picture>
+			<div class="delivery__info">
+				<h2 class="title__two delivery__title">delivery</h2>
+				<ul class="delivery__list">
+					<li class="delivery__item">
+						<a class="delivery__link delivery__link--active" href="#">Delivery</a>
+					</li>
+					<li class="delivery__item">
+						<a class="delivery__link" href="#">Guarantee</a>
+					</li>
+					<li class="delivery__item">
+						<a class="delivery__link" href="#">Credit</a>
+					</li>
+				</ul>
+				<div class="delivery-bar delivery__bar">
+					<p class="text delivery-bar__text">
+						Some days i feel like i've been working on dlk my entire life and there are other days that
+						i am completely shocked that four years have flown by. It's simply magical.
+					</p>
+					<p class="text delivery-bar__text">
+						What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly
+						happy place for me
+						and i have you and all of the beautiful designers that we work with to thank!
+					</p>
+				</div>
+				@@include('button/index.html',{
+				"class": "delivery__button",
+				"type": "button",
+				"text": "Learn More",
+				"disabled": "no"
+				})
+			</div>
+		</div>
+	</div>
+</section>

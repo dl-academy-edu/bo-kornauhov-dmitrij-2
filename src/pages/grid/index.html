@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="DLK grid">
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+	<link href="/normalize.css" rel="stylesheet" />
+	<link href="/common.css" rel="stylesheet" />
+	<link href="/style.css" rel="stylesheet" />
+	<link href="/static/fonts/font-name.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+	<title>DLK</title>
+</head>
+
+<body>
+	@@include('header/index.html', {
+	"type": "pages"
+	})
+	<main>
+	@@include('breadcrumbs/index.html',{
+		"type": "grid"
+	})
+	@@include('grid/index.html')
+	</main>
+	@@include('footer/index.html')
+	@@include('menu/index.html')
+	<script src="scripts.js"></script>
+</body>
+
+</html>

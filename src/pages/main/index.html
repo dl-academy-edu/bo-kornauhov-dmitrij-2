@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="DLK главная страница">
+  <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+  <link href="/normalize.css" rel="stylesheet" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="/style.css" rel="stylesheet" />
+  <link href="/static/fonts/font-name.css" rel="stylesheet">
+  <title>DLK</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+    "type": "main"
+  })
+<main>
+  @@include('slider/index.html')
+  @@include('products/index.html', {
+   "type": "main"
+  })
+  @@include('delivery/index.html')
+  @@include('brands/index.html')
+  @@include('widget/index.html')
+</main>
+  @@include('footer/index.html')
+  @@include('form/index.html',{
+    "type": "form-popup"
+  })
+  @@include('menu/index.html')
+    <audio class="audio" autoplay>
+      <source src="/static/music/sonata.mp3" type="audio/mp3">
+    </audio>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

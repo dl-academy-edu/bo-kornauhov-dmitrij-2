@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="DLK категория продуктов">
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+	<link href="/common.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<link href="/normalize.css" rel="stylesheet" />
+	<link href="/static/fonts/font-name.css" rel="stylesheet">
+	<title>products</title>
+</head>
+
+<body>
+	@@include('header/index.html', {
+		"type": "pages"
+	})
+	@@include('breadcrumbs/index.html',{
+		"type": "products"
+	})
+<main>
+	@@include('products/index.html', {
+		"type": "page"
+	})
+</main>
+	@@include('footer/index.html')
+	@@include('menu/index.html')
+	<script src="scripts.js"></script>
+</body>
+
+</html>

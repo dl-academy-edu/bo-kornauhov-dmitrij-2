@@ -1,0 +1,93 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+@keyframes sun {
+	0% {
+		fill: #ffce54;
+	}
+
+	40% {
+		fill: #ff9e00;
+		transform: scale(1.05);
+	}
+
+	60% {
+		fill: #ffffe5;
+		transform: scale(1, 1);
+	}
+
+	100% {
+		fill: #ffffe5;
+	}
+}
+
+@keyframes clouds {
+	0% {
+		fill: #5d9cec;
+	}
+
+	40% {
+		fill: #5d9cec;
+	}
+
+	60% {
+		fill: #000055;
+	}
+
+	100% {
+		fill: #000055;
+	}
+}
+
+.svg {
+	cursor: pointer;
+	margin: 0 0 60px 0;
+
+	&:hover {
+		.svg__line--1 {
+			stroke: #ccd1d9;
+		}
+
+		.svg__line--2 {
+			stroke: #ffce54;
+		}
+
+		.svg__line--4 {
+			stroke: #5d9cec;
+		}
+
+		.svg__line--5 {
+			stroke: #a0d468;
+		}
+		.svg__line--10 {
+			stroke: #5d9cec;
+		}
+		.svg__line--11 {
+			stroke: #ffce54;
+		}
+		.svg__line--12 {
+			stroke: #ed5565;
+		}
+		.svg__line--13 {
+			stroke: #a0d468;
+		}
+
+		.svg__background {
+			animation: clouds 6s;
+		}
+
+		.svg__sun {
+			animation: sun 6s;
+		}
+	}
+
+	@include media(0, 460px) {
+		width: 100%;
+		margin: -20px 0 10px 0;
+	}
+
+	&__line {
+		transition: $transition;
+	}
+}

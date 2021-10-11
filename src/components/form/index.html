@@ -1,0 +1,109 @@
+@@if (type === "form-popup") {
+<div class="popup">
+	<div class="form__content">
+		<form action="#" method="post" class="form">
+			<fieldset>
+				<div class="form__wrapper">
+					<label class=" form__label" for="input-name">Name</label>
+					<input class="form__input-row form__input" type="text" id="input-name">
+				</div>
+			</fieldset>
+			<fieldset class="form__2-rows">
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label-2-rows form__label" for="input-phone">Phone</label>
+					<input class="form__unput-2-rows form__input" type="tel" id="input-phone">
+				</div>
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label" for="input-email">Email</label>
+					<input class="form__unput-2-rows form__input" type="email" id="input-email">
+				</div>
+			</fieldset>
+			<fieldset class="form__area">
+				<div class="form__wrapper">
+					<label class="form__label" for="textarea">Message</label>
+					<textarea class="form__area form__input" id="textarea"></textarea>
+			</div>
+		</fieldset>
+			<fieldset>
+				<div class="form__checkbox">
+					<label class="form__label">
+						@@include('checkbox/index.html', {
+						"type": "form",
+						"class": "checkbox",
+						"name": "popup",
+						"value": "yes",
+						"checked": "no",
+						"disabled": "no",
+						"label": "check"
+						})
+						<span class="form__label-text">By clicking on the button, you consent to the processing of your personal
+							data</span>
+					</label>
+				</div>
+			</fieldset>
+			@@include('button/index.html',{
+			"class": "form__button",
+			"type": "button",
+			"text": "Submit",
+			"disabled": "yes"
+			})
+		</form>
+		<button class="form__close popup-close-js" aria-label="popup-close-button"><img src="static/images/popup-close.svg"
+				width="15" height="15" alt="close modal"></button>
+	</div>
+</div>
+}
+
+@@if (type === "form-page") {
+<div class="contact-us__content">
+	<div class="container">
+		<form action="#" method="post" class="form">
+			<fieldset>
+				<div class="form__wrapper">
+					<label class=" form__label" for="input-name">Name</label>
+					<input class="form__input-row form__input" type="text" id="input-name">
+				</div>
+			</fieldset>
+			<fieldset class="form__2-rows">
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label-2-rows form__label" for="input-phone">Phone</label>
+					<input class="form__unput-2-rows form__input" type="tel" id="input-phone">
+				</div>
+				<div class="form__wrapper form__2-rows--50">
+					<label class="form__label" for="input-email">Email</label>
+					<input class="form__unput-2-rows form__input" type="email" id="input-email">
+				</div>
+			</fieldset>
+			<fieldset class="form__area">
+				<div class="form__wrapper">
+					<label class="form__label" for="textarea">Message</label>
+					<textarea class="form__area form__input" id="textarea"></textarea>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="form__checkbox">
+					<label class="form__label">
+						@@include('checkbox/index.html', {
+						"type": "form",
+						"class": "checkbox",
+						"name": "popup",
+						"value": "yes",
+						"checked": "yes",
+						"disabled": "no",
+						"label": "check"
+						})
+						<span class="form__label-text">By clicking on the button, you consent to the processing of your personal
+							data</span>
+					</label>
+				</div>
+			</fieldset>
+			@@include('button/index.html',{
+			"class": "form__button",
+			"type": "button",
+			"text": "Submit",
+			"disabled": "no"
+			})
+		</form>
+	</div>
+</div>
+}

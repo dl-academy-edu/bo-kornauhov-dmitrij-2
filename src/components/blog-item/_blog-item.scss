@@ -1,0 +1,94 @@
+@import "./mixin";
+@import "./colors";
+@import "./vars";
+
+.blog {
+	&__item {
+		width: 33.33%;
+		padding: 0 10px;
+		margin-bottom: 35px;
+
+		@include media($m_mob, $m_tab) {
+			margin-bottom: 30px;
+		}
+
+		@include media(0, $m_mob) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__img {
+		max-width: 380px;
+		height: 220px;
+		display: block;
+		background-color: #dfe4ea;
+
+		@include media($m_mob, $m_tab) {
+			max-width: 314px;
+			height: 182px;
+		}
+
+		@include media(0, $m_mob) {
+			max-width: 335px;
+			height: 194px;
+		}
+
+		@include media(0, 370px) {
+			max-width: 290px;
+			height: 194px;
+		}
+	}
+
+	&__link {
+		outline: none;
+	}
+
+	&__link:focus &__title,
+	&__link:hover &__title {
+		text-decoration: underline;
+	}
+
+	&__date {
+		margin: 19px 0 8px 0;
+		font-size: 16px;
+		line-height: 19px;
+		color: #818181;
+
+		@include media($m_mob, $m_tab) {
+			margin: 15px 0 5px 0;
+		}
+
+		@include media(0, $m_mob) {
+			margin: 10px 0 4px 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-family: "Montserrat", "Tahoma", sans-serif;
+		font-size: 24px;
+		line-height: 31px;
+		color: $c__black;
+
+		@include media($m_mob, $m_tab) {
+			margin-bottom: 10px;
+		}
+
+		@include media(0, $m_mob) {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 7px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 25px;
+		color: $c__black;
+
+		@include media(0, $m_mob) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+}

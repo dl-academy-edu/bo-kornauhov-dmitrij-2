@@ -1,0 +1,45 @@
+@@if (type === "form") {
+@@if (checked == 'no' && disabled == 'no') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value">
+<span class="checkbox__form"></span>
+}
+
+@@if (checked == 'yes' && disabled == 'no') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value" checked>
+<span class="checkbox__form"></span>
+}
+
+@@if (checked == 'no' && disabled == 'yes') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value" disabled>
+<span class="checkbox__form"></span>
+}
+
+@@if (checked == 'yes' && disabled == 'yes') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value" checked disabled>
+<span class="checkbox__form"></span>
+	}
+}
+
+@@if (type === "filter") {
+@@if (checked == 'no' && disabled == 'no') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value">
+<span class="checkbox__filter"></span>
+}
+
+@@if (checked == 'yes' && disabled == 'no') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value" checked>
+<span class="checkbox__filter"></span>
+}
+
+@@if (checked == 'no' && disabled == 'yes') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value" disabled>
+<span class="checkbox__filter"></span>
+}
+
+@@if (checked == 'yes' && disabled == 'yes') {
+<input class="checkbox @@class hidden" type="checkbox" name="@@name" value="@@value" checked disabled>
+<span class="checkbox__filter"></span>
+	}
+}
+
+
