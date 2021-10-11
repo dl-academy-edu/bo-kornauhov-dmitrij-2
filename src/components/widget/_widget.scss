@@ -3,6 +3,11 @@
 @import "./vars";
 
 .widget {
+	.container {
+		@include media(0, $m_mob--md) {
+			padding: 0;
+		}
+	}
 	&__content {
 		display: flex;
 		align-items: start;
